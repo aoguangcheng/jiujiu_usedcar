@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<body>
+    <h3>you will redirect to "homepage.html", if your username and password is both correct!!!</h3>
+    <h3>otherwise, you are still this page : "adminLogin.html"</h3>
+    <h3>example:</h3>
+    <h5>username password</h5>
+    <h5>admin admin</h5>
+    <h5>root root</h5>
+    <form th:action="@{/tologin}">
+        <label>username:</label>
+        <input type="text" name="adminName" placeholder="please input your username" autocomplete="off">
+
+        <label>password:</label>
+        <input type="password" name="adminPassword" placeholder="please input your password" autocomplete="off">
+
+        <button>submit</button>
+        <button type="reset">reset</button>
+    </form>
+</body>
+</html>
