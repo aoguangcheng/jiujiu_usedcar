@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"s>
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号</label>
+        <div class="layui-input-block">
+            <input type="text" name="telenum" required  lay-verify="required" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">请输入8~16位密码</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="passwordrepeat" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">请确保两次密码输入正确</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">昵称</label>
+        <div class="layui-input-block">
+            <input type="text" name="nickname" required  lay-verify="required" placeholder="请输入昵称" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <!--缺少头像上传-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">性别</label>
+        <div class="layui-input-block">
+            <input type="radio" name="sex" value="男" title="男">
+            <input type="radio" name="sex" value="女" title="女" checked>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">生日</label>
+            <div class="layui-input-inline">
+                <input type="text" name="birthday" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">居住地</label>
+        <div class="layui-input-inline">
+            <select id="first" onChange="nextChange()">
+                <option selected="selected"></option>
+                <option value="zhanJiang">湛江</option>
+                <option>深圳</option>
+            </select>
+        </div>
+        <div class="layui-input-inline">
+            <select id="second">
+                <option></option>
+            </select>
+        </div>
+        <div class="layui-form-mid layui-word-aux">请选择您的居住地</div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">学院</label>
+        <div class="layui-input-block">
+            <select name="college" lay-verify="required">
+                <option value=""></option>
+                <option value="0">计信</option>
+                <option value="1">生药</option>
+                <option value="2">电气</option>
+                <option value="3">文传</option>
+                <option value="4">经管</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">专业</label>
+        <div class="layui-input-block">
+            <select name="major" lay-verify="required">
+                <option value=""></option>
+                <option value="0">物联网</option>
+                <option value="1">计信</option>
+                <option value="2">电子</option>
+                <option value="3">数媒</option>
+                <option value="4"></option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">年级</label>
+        <div class="layui-input-block">
+            <select name="grade" lay-verify="required">
+                <option value=""></option>
+                <option value="0">19</option>
+                <option value="1">18</option>
+                <option value="2">17</option>
+                <option value="3">17</option>
+                <option value="4"></option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">爱好</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="like[write]" title="写作">
+            <input type="checkbox" name="like[read]" title="阅读" checked>
+            <input type="checkbox" name="like[dai]" title="发呆">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">宿舍</label>
+        <div class="layui-input-block">
+            <select name="dormitory" lay-verify="required">
+                <option value=""></option>
+                <option value="0">南苑</option>
+                <option value="1">欣苑</option>
+                <option value="2">东苑</option>
+                <option value="3">西苑</option>
+                <option value="4"></option>
+            </select>
+        </div>
+    </div>
+    <!--<div class="layui-form-item">-->
+        <!--<label class="layui-form-label">开关</label>-->
+        <!--<div class="layui-input-block">-->
+            <!--<input type="checkbox" name="switch" lay-skin="switch">-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="layui-form-item layui-form-text">-->
+        <!--<label class="layui-form-label">文本域</label>-->
+        <!--<div class="layui-input-block">-->
+            <!--<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#test1'
+        });
+    });
+</script>
+
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+<script>
+    function nextChange() {
+        var province = document.getElementById("province");
+        var city = document.getElementById("city");
+        city.options.length = 1; // 清除second下拉框的所有内容
+        if (province.selectedIndex == 1) {
+            city.options.add(new Option("武汉市", "0"));
+            city.options.add(new Option("宜昌市", "1", false, true)); // 默认选中区
+            city.options.add(new Option("荆州市", "2"));
+            city.options.add(new Option("荆州市", "3"));
+            city.options.add(new Option("襄阳市", "4"));
+            city.options.add(new Option("恩施州", "5"));
+            city.options.add(new Option("十堰市", "6"));
+            city.options.add(new Option("黄石市", "7"));
+        }
+
+        if (province.selectedIndex == 2) {
+            city.options.add(new Option("东城区", "0"));
+            city.options.add(new Option("西城区", "1", false, true)); // 默认选中区
+            city.options.add(new Option("房山区", "2"));
+            city.options.add(new Option("海淀区", "3"));
+            city.options.add(new Option("朝阳区", "4"));
+        }
+        if (province.selectedIndex == 3) {
+            city.options.add(new Option("郑州市", "0", false, true));// 默认选中区
+            city.options.add(new Option("南阳市", "1"));
+            city.options.add(new Option("信阳市", "2"));
+            city.options.add(new Option("平顶山市", "3"));
+            city.options.add(new Option("周家口市", "4"));
+        }
+
+        //1、这里是使用js获取下拉框的值方法
+        /*  var object = document.getElementById("first");//获取对应的select对象
+          var selectedIndex = object.selectedIndex;//获取被选中的下拉框对应的对象索引
+          var val = object.options[selectedIndex].value;//获取被选中对象的值,注意这里是options，获取的是对象框内的value代表的内容
+          var text = object.options[selectedIndex].text;//获取被选中对象的text,注意这里是options,获取的是文本内容
+
+          alert("object:"+object);
+          alert("selectedIndex:"+selectedIndex);
+          alert("value:"+val);
+          alert("text:"+html);*/
+
+        //2.这里是使用jq获取下拉框的值方法
+//        var selectedProvince = $("#province option:selected"); //获取第一个下拉框的被选中对象的值
+//
+//        var selectedProvinceVal = selectedProvince.val(); //拿到选中项的值，比如选中湛江，获取的值为“zhanJiang”;
+//
+//        var selectedProvinceText = selectedProvince.text(); //拿到选中项的文本,比如选中湛江，获取的值为“湛江”
+//
+//        alert("selectedProvince:" + selectedProvince);
+//        alert("selectedProvinceVal:" + selectedProvinceVal);
+//        alert("selectedProvinceText:" + selectedProvinceText);
+    }
+</script>
+<script>
+    function nextChange() {
+        var first = document.getElementById("first");
+        var second = document.getElementById("second");
+        second.options.length = 0; // 清除second下拉框的所有内容
+        if (first.selectedIndex == "1") {
+            second.options.add(new Option("廉江市", "0"));
+            second.options.add(new Option("吴川市", "2"));
+            second.options.add(new Option("坡头区", "1", false, true)); // 默认选中区
+        }
+
+        if (first.selectedIndex == "2") {
+            second.options.add(new Option("福田区", "0"));
+            second.options.add(new Option("罗湖区", "1", false, true)); // 默认选中区
+            second.options.add(new Option("南山区", "2"));
+        }
+
+        //1、这里是使用js获取下拉框的值方法
+        /*  var object = document.getElementById("first");//获取对应的select对象
+          var selectedIndex = object.selectedIndex;//获取被选中的下拉框对应的对象索引
+          var val = object.options[selectedIndex].value;//获取被选中对象的值,注意这里是options，获取的是对象框内的value代表的内容
+          var text = object.options[selectedIndex].text;//获取被选中对象的text,注意这里是options,获取的是文本内容
+
+          alert("object:"+object);
+          alert("selectedIndex:"+selectedIndex);
+          alert("value:"+val);
+          alert("text:"+html);*/
+
+        //2.这里是使用jq获取下拉框的值方法
+        var selectedFirst = $("#first option:selected"); //获取第一个下拉框的被选中对象的值
+
+        var selectedFirstVal = selectedFirst.val(); //拿到选中项的值，比如选中湛江，获取的值为“zhanJiang”;
+
+        var selectedFirstText = selectedFirst.text(); //拿到选中项的文本,比如选中湛江，获取的值为“湛江”
+
+        alert("selectedFirst:" + selectedFirst);
+        alert("selectedFirstVal:" + selectedFirstVal);
+        alert("selectedFirstText:" + selectedFirstText);
+    }
+</script>
+</body>
+</html>

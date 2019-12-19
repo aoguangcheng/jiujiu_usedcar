@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 //@Proxy(lazy = false)
 @Table(name = "admin")
-public class adminInfo {
+public class AdminInfo {
 
 
     @Id
@@ -19,10 +19,10 @@ public class adminInfo {
     @Column(name = "admin_password")
     private String adminPassword;
 
-    public adminInfo() {
+    public AdminInfo() {
     }
 
-    public adminInfo(String adminName, String adminPassword) {
+    public AdminInfo(String adminName, String adminPassword) {
         this.adminName = adminName;
         this.adminPassword = adminPassword;
     }

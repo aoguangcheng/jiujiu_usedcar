@@ -1,7 +1,7 @@
 package com.ctgu.jiujiu_usedcar.controller;
 
-import com.ctgu.jiujiu_usedcar.dao.adminInfoDao;
-import com.ctgu.jiujiu_usedcar.entity.adminInfo;
+import com.ctgu.jiujiu_usedcar.dao.AdminInfoDao;
+import com.ctgu.jiujiu_usedcar.entity.AdminInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class adminLoginCon {
+public class AdminLoginCon {
 
     @Autowired
-    adminInfoDao admininfoDao;
+    AdminInfoDao admininfoDao;
 
 
     @RequestMapping({"/index", "/"})
@@ -26,7 +26,7 @@ public class adminLoginCon {
     @RequestMapping("/tologin")
     public String login(@RequestParam("adminName") String adminName,
                         @RequestParam("adminPassword") String adminPassword) {
-        List<adminInfo> adminInfos = admininfoDao.findByAdminNameAndAdminPassword(adminName, adminPassword);
+        List<AdminInfo> adminInfos = admininfoDao.findByAdminNameAndAdminPassword(adminName, adminPassword);
         if(adminInfos.size() >= 1)
         {
             return "homepage";
