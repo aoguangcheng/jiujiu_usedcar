@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
 
 @Entity
 @Table(name = "user")
@@ -26,7 +25,7 @@ public class User {
     private String sex;
 
     @Column(name = "birthday")
-    private Date birthday;
+    private String birthday;
 
     @Column(name = "dwells")
     private String dwells;
@@ -49,7 +48,7 @@ public class User {
     @Column(name = "info_integrity")
     private Integer infoIntegrity;
 
-    public User(String telenum, String password, String nickname, String headicon, String sex, Date birthday, String dwells, String college, String major, String grade, String hobby, String dormitory, Integer infoIntegrity) {
+    public User(String telenum, String password, String nickname, String headicon, String sex, String birthday, String dwells, String college, String major, String grade, String hobby, String dormitory, Integer infoIntegrity) {
         this.telenum = telenum;
         this.password = password;
         this.nickname = nickname;
@@ -108,11 +107,12 @@ public class User {
         this.sex = sex;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String
+                                    birthday) {
         this.birthday = birthday;
     }
 

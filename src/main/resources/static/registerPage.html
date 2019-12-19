@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"s>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" s>
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
@@ -9,11 +9,11 @@
 </head>
 
 <body>
-<form class="layui-form" action="">
+<form class="layui-form" action="" th:action="@{/toregister}">
     <div class="layui-form-item">
         <label class="layui-form-label">手机号</label>
         <div class="layui-input-block">
-            <input type="text" name="telenum" required  lay-verify="required" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+            <input type="text" name="telenum"  required lay-verify="required" placeholder="请输入手机号" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
@@ -26,14 +26,15 @@
     <div class="layui-form-item">
         <label class="layui-form-label">密码</label>
         <div class="layui-input-inline">
-            <input type="password" name="passwordrepeat" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input">
+            <input type="password" name="passwordrepeat" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off"
+                   class="layui-input">
         </div>
         <div class="layui-form-mid layui-word-aux">请确保两次密码输入正确</div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">昵称</label>
         <div class="layui-input-block">
-            <input type="text" name="nickname" required  lay-verify="required" placeholder="请输入昵称" autocomplete="off" class="layui-input">
+            <input type="text" name="nickname" required lay-verify="required" placeholder="请输入昵称" autocomplete="off" class="layui-input">
         </div>
     </div>
     <!--缺少头像上传-->
@@ -56,91 +57,109 @@
     <div class="layui-form-item">
         <label class="layui-form-label">居住地</label>
         <div class="layui-input-inline">
-            <select id="first" onChange="nextChange()">
-                <option selected="selected"></option>
+            <select id="province" onChange="nextChange()">
+                <option selected="selected">请选择省份</option>
                 <option value="zhanJiang">湛江</option>
-                <option>深圳</option>
+                <option value="shenzhen">深圳</option>
+                <option value="hubei">湖北</option>
+                <option value="henan">河南</option>
             </select>
         </div>
         <div class="layui-input-inline">
-            <select id="second">
-                <option></option>
+            <select id="city">
+                <option selected="selected">请选择城市</option>
+                <option value="yichang">宜昌</option>
+                <option value="jingzhou">荆州</option>
+                <option value="xiangyang">襄阳</option>
+                <option value="wuhan">武汉</option>
             </select>
         </div>
         <div class="layui-form-mid layui-word-aux">请选择您的居住地</div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">学院</label>
-        <div class="layui-input-block">
-            <select name="college" lay-verify="required">
-                <option value=""></option>
-                <option value="0">计信</option>
-                <option value="1">生药</option>
-                <option value="2">电气</option>
-                <option value="3">文传</option>
-                <option value="4">经管</option>
+        <label class="layui-form-label">院校</label>
+        <div class="layui-input-inline">
+            <select name="quiz1">
+                <option value="" selected="selected">请选择年级</option>
+                <option value="20">20</option>
+                <option value="19">19</option>
+                <option value="18">18</option>
+                <option value="17">17</option>
+                <option value="16">16</option>
             </select>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">专业</label>
-        <div class="layui-input-block">
-            <select name="major" lay-verify="required">
-                <option value=""></option>
-                <option value="0">物联网</option>
-                <option value="1">计信</option>
-                <option value="2">电子</option>
-                <option value="3">数媒</option>
-                <option value="4"></option>
+        <!--学院-->
+        <div class="layui-input-inline">
+            <select name="quiz3">
+                <option value="" selected="selected">请选择学院</option>
+                <option value="计信">计信</option>
+                <option value="电气">电气</option>
+                <option value="水环">水环</option>
+                <option value="文传">文传</option>
+                <option value="生药">生药</option>
             </select>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">年级</label>
-        <div class="layui-input-block">
-            <select name="grade" lay-verify="required">
-                <option value=""></option>
-                <option value="0">19</option>
-                <option value="1">18</option>
-                <option value="2">17</option>
-                <option value="3">17</option>
-                <option value="4"></option>
+        <!--专业-->
+        <div class="layui-input-inline">
+            <select name="quiz2">
+                <option value="" selected="selected">请选择专业</option>
+                <option value="计科">计科</option>
+                <option value="物联">物联</option>
+                <option value="电子">电子</option>
+                <option value="通信">通信</option>
+                <option value="数媒">数媒</option>
             </select>
         </div>
+
+        <div class="layui-form-mid layui-word-aux">请选择院校信息</div>
     </div>
+
+    <!--爱好-->
     <div class="layui-form-item">
         <label class="layui-form-label">爱好</label>
         <div class="layui-input-block">
-            <input type="checkbox" name="like[write]" title="写作">
-            <input type="checkbox" name="like[read]" title="阅读" checked>
-            <input type="checkbox" name="like[dai]" title="发呆">
+            <input type="checkbox" name="like[shoujishuma]" title="手机数码">
+            <input type="checkbox" name="like[shenghuobaihuo]" title="生活百货">
         </div>
     </div>
+
     <div class="layui-form-item">
         <label class="layui-form-label">宿舍</label>
-        <div class="layui-input-block">
-            <select name="dormitory" lay-verify="required">
-                <option value=""></option>
-                <option value="0">南苑</option>
-                <option value="1">欣苑</option>
-                <option value="2">东苑</option>
-                <option value="3">西苑</option>
-                <option value="4"></option>
+        <div class="layui-input-inline">
+            <select id="dormitory">
+                <option selected="selected">请选择苑区</option>
+                <option value="1">西苑</option>
+                <option value="2">欣苑</option>
+                <option value="3">南苑</option>
+                <option value="4">东苑</option>
             </select>
         </div>
+        <div class="layui-input-inline">
+            <select id="build" onChange="nextChange()">
+                <option selected="selected">请选择楼栋</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="layui-form-mid layui-word-aux">请选择您的宿舍</div>
     </div>
+
+
     <!--<div class="layui-form-item">-->
-        <!--<label class="layui-form-label">开关</label>-->
-        <!--<div class="layui-input-block">-->
-            <!--<input type="checkbox" name="switch" lay-skin="switch">-->
-        <!--</div>-->
+    <!--<label class="layui-form-label">开关</label>-->
+    <!--<div class="layui-input-block">-->
+    <!--<input type="checkbox" name="switch" lay-skin="switch">-->
+    <!--</div>-->
     <!--</div>-->
 
     <!--<div class="layui-form-item layui-form-text">-->
-        <!--<label class="layui-form-label">文本域</label>-->
-        <!--<div class="layui-input-block">-->
-            <!--<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>-->
-        <!--</div>-->
+    <!--<label class="layui-form-label">文本域</label>-->
+    <!--<div class="layui-input-block">-->
+    <!--<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>-->
+    <!--</div>-->
     <!--</div>-->
     <div class="layui-form-item">
         <div class="layui-input-block">
@@ -150,7 +169,7 @@
     </div>
 </form>
 <script>
-    layui.use('laydate', function(){
+    layui.use('laydate', function() {
         var laydate = layui.laydate;
 
         laydate.render({
@@ -161,11 +180,11 @@
 
 <script>
     //Demo
-    layui.use('form', function(){
+    layui.use('form', function() {
         var form = layui.form;
 
         //监听提交
-        form.on('submit(formDemo)', function(data){
+        form.on('submit(formDemo)', function(data) {
             layer.msg(JSON.stringify(data.field));
             return false;
         });
@@ -195,7 +214,7 @@
             city.options.add(new Option("朝阳区", "4"));
         }
         if (province.selectedIndex == 3) {
-            city.options.add(new Option("郑州市", "0", false, true));// 默认选中区
+            city.options.add(new Option("郑州市", "0", false, true)); // 默认选中区
             city.options.add(new Option("南阳市", "1"));
             city.options.add(new Option("信阳市", "2"));
             city.options.add(new Option("平顶山市", "3"));
@@ -214,15 +233,15 @@
           alert("text:"+html);*/
 
         //2.这里是使用jq获取下拉框的值方法
-//        var selectedProvince = $("#province option:selected"); //获取第一个下拉框的被选中对象的值
-//
-//        var selectedProvinceVal = selectedProvince.val(); //拿到选中项的值，比如选中湛江，获取的值为“zhanJiang”;
-//
-//        var selectedProvinceText = selectedProvince.text(); //拿到选中项的文本,比如选中湛江，获取的值为“湛江”
-//
-//        alert("selectedProvince:" + selectedProvince);
-//        alert("selectedProvinceVal:" + selectedProvinceVal);
-//        alert("selectedProvinceText:" + selectedProvinceText);
+        //        var selectedProvince = $("#province option:selected"); //获取第一个下拉框的被选中对象的值
+        //
+        //        var selectedProvinceVal = selectedProvince.val(); //拿到选中项的值，比如选中湛江，获取的值为“zhanJiang”;
+        //
+        //        var selectedProvinceText = selectedProvince.text(); //拿到选中项的文本,比如选中湛江，获取的值为“湛江”
+        //
+        //        alert("selectedProvince:" + selectedProvince);
+        //        alert("selectedProvinceVal:" + selectedProvinceVal);
+        //        alert("selectedProvinceText:" + selectedProvinceText);
     }
 </script>
 <script>
@@ -230,13 +249,13 @@
         var first = document.getElementById("first");
         var second = document.getElementById("second");
         second.options.length = 0; // 清除second下拉框的所有内容
-        if (first.selectedIndex == "1") {
+        if (first.selectedIndex == 1) {
             second.options.add(new Option("廉江市", "0"));
             second.options.add(new Option("吴川市", "2"));
             second.options.add(new Option("坡头区", "1", false, true)); // 默认选中区
         }
 
-        if (first.selectedIndex == "2") {
+        if (first.selectedIndex == 2) {
             second.options.add(new Option("福田区", "0"));
             second.options.add(new Option("罗湖区", "1", false, true)); // 默认选中区
             second.options.add(new Option("南山区", "2"));

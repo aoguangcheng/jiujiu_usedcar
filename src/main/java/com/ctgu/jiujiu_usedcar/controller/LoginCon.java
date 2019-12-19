@@ -26,13 +26,26 @@ public class LoginCon {
         VerificationCode = RandomStringUtil.getRandomString(4);
         model.addAttribute("VerificationCode",VerificationCode);
     }
-
+//跳转到登录界面
+    @RequestMapping("/")
+    public String tohomePage(Model model)
+    {
+        model.addAttribute("userStatus","未登录");
+        return "homePage";
+    }
     @RequestMapping("tologinPage")
     public String toLoginPage(Model model){
         this.generateVerficationCode(model);
         return "loginPage";
     }
-
+    //退出登录
+    @RequestMapping("tologinout")
+    public String tologinout(HttpSession session,Model model){
+        session.removeAttribute("user");
+        model.addAttribute("userStatus","未登录");
+        return "homepage";
+    }
+//在登录界面验证登录
     @RequestMapping("submitInfo")
     public String submitInfo(@RequestParam("telenum") String telenum,
                              @RequestParam("password") String password,
@@ -59,12 +72,15 @@ public class LoginCon {
                     {
                         //该用户信息完整度大于80，跳转到主界面homepage
                         session.setAttribute("user",userList.get(0));
+                        model.addAttribute("userStatus", "已登录");
                         return "homepage";
                     }
                     else {
                         //用户信息小于80，提示到个人信息界面补充信息
                     /*
                     * 进行后续操作*/
+                        session.setAttribute("user",userList.get(0));
+                        model.addAttribute("userStatus", "已登录");
                         return "homepage";
                     }
                 }

@@ -2,8 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <body>
-    <a th:href="@{/tologinPage}">登录</a>
-    <a th:href="@{/toregisterPage}">注册</a>
+    <a th:if="${userStatus} == '未登录'" th:href="@{/tologinPage}">登录</a>
+    <a th:if="${userStatus} == '未登录'" th:href="@{/toregisterPage}">注册</a>
+    <a th:if="${userStatus} == '已登录'" th:href="@{/tologinout}">退出登录</a>
+    <span th:if="${userStatus} == '未登录'">未登录</span>
+    <span th:if="${userStatus}  == '已登录'" th:text="${session.user.getNickname()}"></span>
+    <a th:if="${userStatus} == '已登录'" th:href="@{/touserInfo}">个人中心</a>
     <h1>HomePage</h1>
     <h2>MySql 5.7: 47.102.192.95 username : root  password : "Aoroot8550304--"</h2>
     <h2>Maven 3.5.0 </h2>
