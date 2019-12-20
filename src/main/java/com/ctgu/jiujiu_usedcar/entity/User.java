@@ -39,8 +39,8 @@ public class User {
     @Column(name = "grade")
     private String grade;
 
-    @Column(name = "hobby")
-    private String hobby;
+    @Column(name = "balance")
+    private String balance;
 
     @Column(name = "dormitory")
     private String dormitory;
@@ -48,7 +48,10 @@ public class User {
     @Column(name = "info_integrity")
     private Integer infoIntegrity;
 
-    public User(String telenum, String password, String nickname, String headicon, String sex, String birthday, String dwells, String college, String major, String grade, String hobby, String dormitory, Integer infoIntegrity) {
+    public User() {
+    }
+
+    public User(String telenum, String password, String nickname, String headicon, String sex, String birthday, String dwells, String college, String major, String grade, String balance, String dormitory, Integer infoIntegrity) {
         this.telenum = telenum;
         this.password = password;
         this.nickname = nickname;
@@ -59,12 +62,28 @@ public class User {
         this.college = college;
         this.major = major;
         this.grade = grade;
-        this.hobby = hobby;
+        this.balance = balance;
         this.dormitory = dormitory;
         this.infoIntegrity = infoIntegrity;
     }
 
-    public User() {
+    @Override
+    public String toString() {
+        return "User{" +
+                "telenum='" + telenum + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", headicon='" + headicon + '\'' +
+                ", sex='" + sex + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", dwells='" + dwells + '\'' +
+                ", college='" + college + '\'' +
+                ", major='" + major + '\'' +
+                ", grade='" + grade + '\'' +
+                ", balance='" + balance + '\'' +
+                ", dormitory='" + dormitory + '\'' +
+                ", infoIntegrity=" + infoIntegrity +
+                '}';
     }
 
     public String getTelenum() {
@@ -111,8 +130,7 @@ public class User {
         return birthday;
     }
 
-    public void setBirthday(String
-                                    birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -148,12 +166,12 @@ public class User {
         this.grade = grade;
     }
 
-    public String getHobby() {
-        return hobby;
+    public String getBalance() {
+        return balance;
     }
 
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
+    public void setBalance(String balance) {
+        this.balance = balance;
     }
 
     public String getDormitory() {
@@ -170,24 +188,5 @@ public class User {
 
     public void setInfoIntegrity(Integer infoIntegrity) {
         this.infoIntegrity = infoIntegrity;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "telenum='" + telenum + '\'' +
-                ", password='" + password + '\'' +
-                ", nickname='" + nickname + '\'' +
-                ", headicon='" + headicon + '\'' +
-                ", sex='" + sex + '\'' +
-                ", birthday=" + birthday +
-                ", dwells='" + dwells + '\'' +
-                ", college='" + college + '\'' +
-                ", major='" + major + '\'' +
-                ", grade='" + grade + '\'' +
-                ", hobby='" + hobby + '\'' +
-                ", dormitory='" + dormitory + '\'' +
-                ", infoIntegrity=" + infoIntegrity +
-                '}';
     }
 }

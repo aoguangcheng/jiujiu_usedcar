@@ -1,7 +1,9 @@
 package com.ctgu.jiujiu_usedcar.controller;
 
 import com.ctgu.jiujiu_usedcar.config.RandomStringUtil;
+import com.ctgu.jiujiu_usedcar.dao.GoodsDao;
 import com.ctgu.jiujiu_usedcar.dao.UserDao;
+import com.ctgu.jiujiu_usedcar.entity.Goods;
 import com.ctgu.jiujiu_usedcar.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ public class LoginCon {
     @Autowired
     UserDao userDao;
 
+    @Autowired
+    GoodsDao goodsDao;
+
     String VerificationCode;
 
     //生成验证码
@@ -26,13 +31,17 @@ public class LoginCon {
         VerificationCode = RandomStringUtil.getRandomString(4);
         model.addAttribute("VerificationCode",VerificationCode);
     }
-//跳转到登录界面
+    //主界面
     @RequestMapping("/")
     public String tohomePage(Model model)
     {
+        List<Goods> goods = goodsDao.findAllByState(1);
+        model.addAttribute("goodsList",goods);
+        model.addAttribute("user",userDao.findByTelenum("admin").get(0));
         model.addAttribute("userStatus","未登录");
         return "homePage";
     }
+    //跳转到登录界面
     @RequestMapping("tologinPage")
     public String toLoginPage(Model model){
         this.generateVerficationCode(model);
@@ -68,20 +77,24 @@ public class LoginCon {
                 if(userList.get(0).getPassword().equals(password))
                 {
                     //密码正确
+                    System.out.println(userList.get(0).toString());
+                    System.out.println("密码正确");
                     if(userList.get(0).getInfoIntegrity() >= 80)
                     {
                         //该用户信息完整度大于80，跳转到主界面homepage
+                        System.out.println("信息完整");
                         session.setAttribute("user",userList.get(0));
                         model.addAttribute("userStatus", "已登录");
-                        return "homepage";
+                        return "redirect:/";
                     }
                     else {
                         //用户信息小于80，提示到个人信息界面补充信息
                     /*
                     * 进行后续操作*/
+                        System.out.println("信息不完整");
                         session.setAttribute("user",userList.get(0));
                         model.addAttribute("userStatus", "已登录");
-                        return "homepage";
+                            return "redirect:/";
                     }
                 }
                 else {

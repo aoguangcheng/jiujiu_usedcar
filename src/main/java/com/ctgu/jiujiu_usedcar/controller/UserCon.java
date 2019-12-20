@@ -16,43 +16,41 @@ import java.io.File;
 import java.io.IOException;
 
 @Controller
-public class RegisterCon {
+public class UserCon {
     /**上传地址*/
     @Value("${file.upload.path}")
     private String filePath;
 
     @Autowired
     UserDao userDao;
-
-    @RequestMapping("toregisterPage")
-    public String toregisterPage()
-    {
-        return "registerPage";
+    @RequestMapping("touserInfo")
+    public String touserInfo(HttpSession session, Model model){
+        return "userInfo";
     }
 
-    @RequestMapping("homePage")
-    public String tohomePage(){
-        return "redirect:/";
+    @RequestMapping("toeditUser")
+    public String toeditUser(){
+        return "editUser";
     }
 
-    @RequestMapping("toregister")
-    public String register(@RequestParam("telenum") String telenum,
-                           @RequestParam("password") String password,
-                           @RequestParam("passwordrepeat") String passwordrepeat,
-                           @RequestParam("nickname") String nickname,
-                           @RequestParam("headicon") MultipartFile file,
-                           @RequestParam("sex") String sex,
-                           @RequestParam("birthday") String birthday,
-                           @RequestParam("province") String province,
-                           @RequestParam("city") String city,
-                           @RequestParam("grade") String grade,
-                           @RequestParam("college") String college,
-                           @RequestParam("major") String major,
-                           //@RequestParam("hobby") List<String> hobby,
-                           @RequestParam("dormitory") String dormitory,
-                           @RequestParam("build") String build,
-                           Model model,
-                           HttpSession session) throws  Exception{
+    @RequestMapping("tosaveModify")
+    public String tosaveModify(@RequestParam("telenum") String telenum,
+                               @RequestParam("password") String password,
+                               @RequestParam("passwordrepeat") String passwordrepeat,
+                               @RequestParam("nickname") String nickname,
+                               @RequestParam("headicon") MultipartFile file,
+                               @RequestParam("sex") String sex,
+                               @RequestParam("birthday") String birthday,
+                               @RequestParam("province") String province,
+                               @RequestParam("city") String city,
+                               @RequestParam("grade") String grade,
+                               @RequestParam("college") String college,
+                               @RequestParam("major") String major,
+                               //@RequestParam("hobby") List<String> hobby,
+                               @RequestParam("dormitory") String dormitory,
+                               @RequestParam("build") String build,
+                               Model model,
+                               HttpSession session) throws  Exception{
         User user = new User();
         user.setTelenum(telenum);
         user.setPassword(password);
@@ -64,9 +62,11 @@ public class RegisterCon {
         user.setCollege(college);
         user.setMajor(major);
         //user.setHobby(hobby.get(0));
-        user.setBalance("0");
+        user.setBalance(userDao.findByTelenum(telenum).get(0).getBalance());
         user.setDormitory(dormitory+build + "#");
-        // 获取上传文件名
+        System.out.println(user.toString());
+
+        //图片
         String oldfilename = file.getOriginalFilename();
         System.out.println("初始的文件名"+oldfilename);
         String filename = (new RandomStringUtil().getRandomString(18)) +"-"+ oldfilename;
@@ -89,9 +89,20 @@ public class RegisterCon {
         user.setHeadicon("/images/rotPhoto/"+filename);
 
         System.out.println(user.toString());
+        user.setInfoIntegrity(userDao.findByTelenum(telenum).get(0).getInfoIntegrity());
         userDao.save(user);
         session.setAttribute("user",user);
         model.addAttribute("userStatus","已登录");
-        return "redirect:/";
+        return "userInfo";
+
+    }
+
+    @RequestMapping("toeditBalance")
+    public String toeditBalance(@RequestParam("modifyBalance") String modifyBalance,
+                                HttpSession session){
+        User user = (User)session.getAttribute("user");
+        user.setBalance(String.valueOf(Double.parseDouble(user.getBalance()) + Double.parseDouble(modifyBalance)));
+        userDao.save(user);
+        return "userInfo";
     }
 }
