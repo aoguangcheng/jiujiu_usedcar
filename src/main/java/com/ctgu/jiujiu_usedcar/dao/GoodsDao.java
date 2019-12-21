@@ -8,4 +8,5 @@ import java.util.List;
 public interface GoodsDao  extends JpaRepository<Goods,Integer>{
     List<Goods> findAllByState(Integer state);
     List<Goods> findAllByStateAndOwner(Integer state, String owener);
+    Goods findGoodsByGoodNum(Integer goodNum);
 }

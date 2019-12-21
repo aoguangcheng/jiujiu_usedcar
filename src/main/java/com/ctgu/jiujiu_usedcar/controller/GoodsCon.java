@@ -85,8 +85,10 @@ public class GoodsCon {
     }
 
     @RequestMapping("/todetailGoods/{id}")
-    public String detailGoods(@PathVariable("id") Integer goodsNum){
-        Goods goods = goodsDao.findById()
-        return "detailGoods";
+    public String detailGoods(@PathVariable("id") Integer goodsNum,
+                              Model model){
+        Goods goods = goodsDao.findGoodsByGoodNum(goodsNum);
+        model.addAttribute("goods",goods);
+        return "goods";
     }
 }
