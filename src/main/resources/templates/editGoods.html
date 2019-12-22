@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" s>
 <head>
     <meta charset="UTF-8">
-    <title>发布物品</title>
+    <title>修改物品</title>
     <script src="layui/layui.js"></script>
     <link rel="stylesheet" href="layui/css/layui.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -13,8 +13,8 @@
     <div th:insert="~{header::topbar}"></div>
 </div>
 <div class="layui-row">
-    <div class="layui-col-md10 layui-col-lg-offset1">
-        <form class="layui-form" action="" th:action="@{/addgoods}" method="post" enctype="multipart/form-data">
+    <div class="layui-col-md8 layui-col-lg-offset2">
+        <form class="layui-form" action="" th:action="@{/toeditGoods}" method="post" enctype="multipart/form-data">
 
             <!--缺少头像上传<input type="file" name="file" accept="image/*">-->
             <div class="layui-form-item">
@@ -74,7 +74,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">价格</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="price" required lay-verify="required" placeholder="请输入价格" autocomplete="on" class="layui-input">
+                    <input type="text" name="price" th:value="${session.goodsobj.getPrice()}" required lay-verify="required" placeholder="请输入价格" autocomplete="on" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">请输入您想出手的价格</div>
             </div>
@@ -82,7 +82,7 @@
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">描述</label>
                 <div class="layui-input-block">
-                    <textarea name="description" placeholder="请简短的描述物品" class="layui-textarea"></textarea>
+                    <textarea name="description" th:text="${session.goodsobj.getDescription()}" placeholder="请简短的描述物品" class="layui-textarea"></textarea>
                 </div>
             </div>
 

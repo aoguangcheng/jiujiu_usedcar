@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"s>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 20%;
+        }
+        .center-in-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" />
+</head>
+<body>
+<div class="layui-row">
+    <div th:insert="~{header::topbar}"></div>
+</div>
+<div class="center-in-center">
+    <div class="layui-row">
+        <div class="layui-col-md4 layui-col-lg-offset4">
+
+            <form class="layui-form" action="" th:action="@{/submitInfo}">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密&emsp;码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="password" required lay-verify="required"  placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!--</div>-->
+        </div>
+    </div>
+</body>
+</html>

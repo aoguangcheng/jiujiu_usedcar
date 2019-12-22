@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e7afce5-1a90-45a6-a45f-029908a6ee39" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/pic/pic1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/pic/pic2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/pic/pic3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/goods.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java" afterPath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java" afterPath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java" afterPath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java" afterPath="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/detailGoods.html" afterPath="$PROJECT_DIR$/src/main/resources/static/detailGoods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/addgoods.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/addgoods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/detailGoods.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/detailGoods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/editUser.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/editUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/homepage.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/homepage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/uploadpage.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/uploadpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/userInfo.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/userInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/userPutdown.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/userPutdown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/userRelease.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/userRelease.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,11 +48,115 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="GoodsCon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java">
+      <file leaf-file-name="OrderCon.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/OrderCon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+            <state relative-caret-position="348">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3328">
+              <caret line="119" column="12" lean-forward="true" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+              <folding>
+                <element signature="e#1057#1058#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1172#1173#0" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1284#1285#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#1354#1355#0" expanded="true" />
+                <element signature="e#1382#1383#0" expanded="true" />
+                <element signature="e#1424#1425#0" expanded="true" />
+                <element signature="e#1458#1459#0" expanded="true" />
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#1520#1521#0" expanded="true" />
+                <element signature="e#1564#1565#0" expanded="true" />
+                <element signature="e#1600#1601#0" expanded="true" />
+                <element signature="e#1638#1639#0" expanded="true" />
+                <element signature="e#1672#1673#0" expanded="true" />
+                <element signature="e#1726#1727#0" expanded="true" />
+                <element signature="e#1772#1773#0" expanded="true" />
+                <element signature="e#1803#1804#0" expanded="true" />
+                <element signature="e#1830#1831#0" expanded="true" />
+                <element signature="e#1870#1871#0" expanded="true" />
+                <element signature="e#1902#1903#0" expanded="true" />
+                <element signature="e#1934#1935#0" expanded="true" />
+                <element signature="e#1962#1963#0" expanded="true" />
+                <element signature="e#2004#2005#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#2071#2072#0" expanded="true" />
+                <element signature="e#2099#2100#0" expanded="true" />
+                <element signature="e#2142#2143#0" expanded="true" />
+                <element signature="e#2176#2177#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Goods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="e#3210#3211#0" expanded="true" />
+                <element signature="e#3242#3243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/OrderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowseRecordTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/BrowseRecordTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowseRecordDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecordDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/OrderDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,7 +167,7 @@
       <file leaf-file-name="GoodsDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="290">
               <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,31 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detailGoods.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/detailGoods.html">
+      <file leaf-file-name="payPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/order/payPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="goods.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detailGoods.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/detailGoods.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="1015">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,54 +189,9 @@
       <file leaf-file-name="loginPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
+            <state relative-caret-position="928">
+              <caret line="32" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/homepage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Goods.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1508">
-              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addgoods.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addgoods.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userPutdown.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userPutdown.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,9 +203,9 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -171,10 +229,22 @@
       <find>bal</find>
       <find>Bal</find>
       <find>tolo</find>
+      <find>price</find>
+      <find>own</find>
+      <find>padd</find>
+      <find>pur</find>
+      <find>tologinout</find>
+      <find>put</find>
+      <find>修改</find>
+      <find>add</find>
+      <find>toregister</find>
+      <find>个人</find>
+      <find>购买</find>
     </findStrings>
     <replaceStrings>
       <replace>AdminInfo</replace>
       <replace>balance</replace>
+      <replace>goods</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -188,57 +258,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/aoguangcheng/adminTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/aoguangcheng/AdminTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/registerPage.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/StringListToString.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/touserInfo.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/userInfo.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/userInfo.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/toeditUser.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/uploadFile.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/uploadpage.html" />
-        <option value="C:/aoguangcheng/apache-maven-3.5.0/Repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class" />
-        <option value="C:/aoguangcheng/apache-maven-3.5.0/Repository/org/springframework/spring-beans/5.2.0.RELEASE/spring-beans-5.2.0.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class" />
-        <option value="C:/aoguangcheng/apache-maven-3.5.0/Repository/org/springframework/boot/spring-boot-autoconfigure/2.2.0.RELEASE/spring-boot-autoconfigure-2.2.0.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/userInfo.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/userCon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/summaryClassifynameDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/summaryClassifyDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/summaryClassify.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/SummaryClassify.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/SummaryClassifyDao.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/summaryClassifyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/SummaryClassifyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/DetailClassify.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/DetailClassifyDao.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/DetailClassifyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/GoodsTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/editUser.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/homepage.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/UploadConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UploadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/UploadImageConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/addgoods.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/userRelease.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/userPutdown.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/homepage.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/detailGoods.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/detailGoods.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/goods.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/alreadySold.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/LeaveMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/LeaveMessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/detailGoods.html" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/LeaveMessageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LeaveMessageCon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Star.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editGoods.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/uploadpage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userRelease.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userInfo.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editUser.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addgoods.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userPutdown.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userSold.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/StarDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/StarTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userStar.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/StarCon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/BrowseRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecord.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/BrowseRecordTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userBrowseRecord.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecordDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/BrowseRecordCon.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/detailBody.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/header.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goodsListBody.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/homepage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/payPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/order/payPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/detailGoods.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/OrderCon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/OrderDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/OrderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Order.java" />
       </list>
     </option>
   </component>
@@ -609,18 +679,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="jiujiu_usedcar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="jiujiu_usedcar" type="1039202d:NonAndroidModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -653,15 +713,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jiujiu_usedcar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jiujiu_usedcar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiujiu_usedcar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jiujiu_usedcar" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jiujiu_usedcar" type="b2602c69:ProjectViewProjectNode" />
@@ -717,6 +768,15 @@
               <item name="jiujiu_usedcar" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiujiu_usedcar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiujiu_usedcar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiujiu_usedcar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -756,8 +816,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jiujiu_usedcar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="jiujiu_usedcar" type="1039202d:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -773,7 +843,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="SearchEverywhereHistoryKey" value="goodc&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;home&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;goodsdao&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java&#10;goodcon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;goods&#9;PSI&#9;JAVA://com.ctgu.jiujiu_usedcar.entity.Goods&#10;good&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/static/detailGoods.html&#10;hoem&#9;null&#9;null&#10;goocon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;us&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/userPutdown.html&#10;pro&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/application.properties&#10;homepage&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;god&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java&#10;login&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java&#10;goodsco&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;upconfig&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/config/UploadConfig.java&#10;od&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java&#10;up&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/UploadController.java&#10;add&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/addgoods.html&#10;usercon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java&#10;user&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/test/java/com/ctgu/jiujiu_usedcar/entity/UserTest.java&#10;regi&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java&#10;goo&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java&#10;edit&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/editUser.html&#10;upload&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/uploadpage.html&#10;de&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/DetailClassify.java&#10;info&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/static/userInfo.html&#10;pom&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/pom.xml&#10;wuser&#9;null&#9;null&#10;edi&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/editUser.html&#10;log&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java&#10;regis&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/registerPage.html&#10;usco&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/userCon.java&#10;homep&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;hobb&#9;PSI&#9;JAVA://com.ctgu.jiujiu_usedcar.entity.User#hobby&#10;use&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/User.java&#10;u&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/static/userInfo.html&#10;re&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java&#10;con&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java&#10;uplo&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/UploadController.java&#10;hpme&#9;PSI&#9;JAVA://org.springframework.data.web.HateoasPageableHandlerMethodArgumentResolver&#10;loginht&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/loginPage.html&#10;regishtml&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/registerPage.html&#10;res&#9;FILE&#9;jar://C:/Program Files (x86)/jdk/src.zip!/com/sun/corba/se/impl/protocol/giopmsgheaders/TargetAddress.java&#10;uset&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/test/java/com/ctgu/jiujiu_usedcar/entity/UserTest.java&#10;userdao&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/UserDao.java&#10;hom&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;dao&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/adminInfoDao.java&#10;adminlogin&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/adminLogin.html&#10;admininfo&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/adminInfo.java&#10;entity &#9;PSI&#9;JAVA://org.w3c.dom.Entity" />
+    <property name="SearchEverywhereHistoryKey" value="bdao&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecordDao.java&#10;test&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/test/java/com/ctgu/jiujiu_usedcar/entity/BrowseRecordTest.java&#10;home&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;head&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/header.html&#10;brow&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecordDao.java&#10;goods&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;login&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java&#10;star&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/StarDao.java&#10;goodsc&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;det&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/detailGoods.html&#10;user&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java&#10;toregister&#9;PSI&#9;JAVA://com.ctgu.jiujiu_usedcar.controller.RegisterCon#toregisterPage&#10;edit&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/editUser.html&#10;deta&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/detailGoods.html&#10;goodscon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;add&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/addgoods.html&#10;de&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/detailGoods.html&#10;rel&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/userRelease.html&#10;put&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/userPutdown.html&#10;lea&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/LeaveMessageCon.java&#10;le&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/LeaveMessage.java&#10;goodc&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;goodsdao&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java&#10;goodcon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;good&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/static/detailGoods.html&#10;hoem&#9;null&#9;null&#10;goocon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;us&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/userPutdown.html&#10;pro&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/application.properties&#10;homepage&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;god&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java&#10;goodsco&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java&#10;upconfig&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/config/UploadConfig.java&#10;od&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java&#10;up&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/UploadController.java&#10;usercon&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java&#10;regi&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java&#10;goo&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java&#10;upload&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/uploadpage.html&#10;info&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/static/userInfo.html&#10;pom&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/pom.xml&#10;wuser&#9;null&#9;null&#10;edi&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/editUser.html&#10;log&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java&#10;regis&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/registerPage.html&#10;usco&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/controller/userCon.java&#10;homep&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/templates/homepage.html&#10;hobb&#9;PSI&#9;JAVA://com.ctgu.jiujiu_usedcar.entity.User#hobby&#10;use&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/java/com/ctgu/jiujiu_usedcar/entity/User.java&#10;u&#9;FILE&#9;file://C:/Users/Hobbitao/IdeaProjects/jiujiu_usedcar/src/main/resources/static/userInfo.html" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -781,22 +851,23 @@
       <recent name="com.ctgu.jiujiu_usedcar.entity" />
       <recent name="com.ctgu.jiujiu_usedcar.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\static\pic" />
-      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\static" />
-      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\templates" />
-      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ctgu.jiujiu_usedcar" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\static\pic" />
       <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\templates" />
       <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\static" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\templates\order" />
+      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\static\pic" />
+      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\static" />
+      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources\templates" />
+      <recent name="C:\Users\Hobbitao\IdeaProjects\jiujiu_usedcar\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -811,33 +882,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JiujiuUsedcarApplication">
-    <configuration name="AdminTest.getAdminInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.aoguangcheng.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jiujiu_usedcar" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.aoguangcheng" />
-      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.aoguangcheng.AdminTest" />
-      <option name="METHOD_NAME" value="getAdminInfo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="DetailClassifyTest.findOneDetailClassify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OrderTest.findAllOrder">
+    <configuration name="BrowseRecordTest.findAllBrowseRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.entity.*" />
@@ -848,33 +894,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.DetailClassifyTest" />
-      <option name="METHOD_NAME" value="findOneDetailClassify" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="GoodsTest.findOneGoods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jiujiu_usedcar" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.GoodsTest" />
-      <option name="METHOD_NAME" value="findOneGoods" />
+      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.BrowseRecordTest" />
+      <option name="METHOD_NAME" value="findAllBrowseRecord" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -893,7 +914,7 @@
       <module name="jiujiu_usedcar" />
       <envs />
     </configuration>
-    <configuration name="SummaryClassifyTest.findOneSummaryClassify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LeaveMessageTest.finAllLeaveMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.entity.*" />
@@ -904,8 +925,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.SummaryClassifyTest" />
-      <option name="METHOD_NAME" value="findOneSummaryClassify" />
+      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.LeaveMessageTest" />
+      <option name="METHOD_NAME" value="finAllLeaveMessage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -918,7 +939,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserTest.getUserByTelenum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderTest.findAllOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.entity.*" />
@@ -929,8 +950,58 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.UserTest" />
-      <option name="METHOD_NAME" value="getUserByTelenum" />
+      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.OrderTest" />
+      <option name="METHOD_NAME" value="findAllOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="StarTest.findAllStar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jiujiu_usedcar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.StarTest" />
+      <option name="METHOD_NAME" value="findAllStar" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="StarTest.findUserStar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ctgu.jiujiu_usedcar.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jiujiu_usedcar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ctgu.jiujiu_usedcar.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.ctgu.jiujiu_usedcar.entity.StarTest" />
+      <option name="METHOD_NAME" value="findUserStar" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1026,19 +1097,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.JiujiuUsedcarApplication" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AdminTest.getAdminInfo" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.getUserByTelenum" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SummaryClassifyTest.findOneSummaryClassify" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DetailClassifyTest.findOneDetailClassify" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.GoodsTest.findOneGoods" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LeaveMessageTest.finAllLeaveMessage" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StarTest.findAllStar" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.StarTest.findUserStar" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BrowseRecordTest.findAllBrowseRecord" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.OrderTest.findAllOrder" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DetailClassifyTest.findOneDetailClassify" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.getUserByTelenum" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GoodsTest.findOneGoods" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SummaryClassifyTest.findOneSummaryClassify" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AdminTest.getAdminInfo" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OrderTest.findAllOrder" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BrowseRecordTest.findAllBrowseRecord" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StarTest.findUserStar" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StarTest.findAllStar" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LeaveMessageTest.finAllLeaveMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -1072,7 +1143,11 @@
       <workItem from="1576751345664" duration="17503000" />
       <workItem from="1576813837013" duration="5987000" />
       <workItem from="1576820239426" duration="26429000" />
-      <workItem from="1576903496247" duration="670000" />
+      <workItem from="1576903496247" duration="9498000" />
+      <workItem from="1576913995316" duration="12841000" />
+      <workItem from="1576927804928" duration="10894000" />
+      <workItem from="1576977500260" duration="15473000" />
+      <workItem from="1577006723340" duration="1549000" />
     </task>
     <task id="LOCAL-00001" summary="uploadImage">
       <created>1576563439108</created>
@@ -1092,39 +1167,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DetailClassifyTest_findOneDetailClassify - 2019.12.20 at 16h 34m 25s.xml">
-      <configuration name="DetailClassifyTest.findOneDetailClassify" configurationId="JUnit" />
+    <history-entry file="BrowseRecordTest_findAllBrowseRecord - 2019.12.22 at 17h 33m 56s.xml">
+      <configuration name="BrowseRecordTest.findAllBrowseRecord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GoodsTest_findOneGoods - 2019.12.20 at 13h 48m 00s.xml">
-      <configuration name="GoodsTest.findOneGoods" configurationId="JUnit" />
+    <history-entry file="OrderTest_findAllOrder - 2019.12.22 at 17h 27m 15s.xml">
+      <configuration name="OrderTest.findAllOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GoodsTest_findOneGoods - 2019.12.20 at 13h 53m 26s.xml">
-      <configuration name="GoodsTest.findOneGoods" configurationId="JUnit" />
+    <history-entry file="OrderTest_findAllOrder - 2019.12.22 at 17h 29m 29s.xml">
+      <configuration name="OrderTest.findAllOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GoodsTest_findOneGoods - 2019.12.20 at 13h 54m 17s.xml">
-      <configuration name="GoodsTest.findOneGoods" configurationId="JUnit" />
+    <history-entry file="OrderTest_findAllOrder - 2019.12.22 at 17h 33m 01s.xml">
+      <configuration name="OrderTest.findAllOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GoodsTest_findOneGoods - 2019.12.20 at 14h 04m 51s.xml">
-      <configuration name="GoodsTest.findOneGoods" configurationId="JUnit" />
+    <history-entry file="OrderTest_findAllOrder - 2019.12.22 at 17h 39m 45s.xml">
+      <configuration name="OrderTest.findAllOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_getUserByTelenum - 2019.12.18 at 18h 50m 56s.xml">
-      <configuration name="UserTest.getUserByTelenum" configurationId="JUnit" />
+    <history-entry file="OrderTest_findAllOrder - 2019.12.22 at 17h 47m 35s.xml">
+      <configuration name="OrderTest.findAllOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_getUserByTelenum - 2019.12.18 at 19h 10m 01s.xml">
-      <configuration name="UserTest.getUserByTelenum" configurationId="JUnit" />
+    <history-entry file="OrderTest_findAllOrder - 2019.12.22 at 17h 50m 33s.xml">
+      <configuration name="OrderTest.findAllOrder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_getUserByTelenum - 2019.12.19 at 21h 31m 04s.xml">
-      <configuration name="UserTest.getUserByTelenum" configurationId="JUnit" />
+    <history-entry file="StarTest_findUserStar - 2019.12.22 at 15h 07m 46s.xml">
+      <configuration name="StarTest.findUserStar" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_getUserByTelenum - 2019.12.20 at 14h 15m 08s.xml">
-      <configuration name="UserTest.getUserByTelenum" configurationId="JUnit" />
+    <history-entry file="StarTest_findUserStar - 2019.12.22 at 17h 15m 08s.xml">
+      <configuration name="StarTest.findUserStar" configurationId="JUnit" />
     </history-entry>
     <history-entry file="adminTest_getAdminInfo - 2019.12.18 at 18h 26m 01s.xml">
       <configuration name="adminTest.getAdminInfo" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103261000" />
+    <option name="totallyTimeSpent" value="152846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1137,6 +1212,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1152,7 +1228,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2613391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2640389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1168,37 +1244,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.50215983" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39975095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66998756" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25701943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1223,319 +1268,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/AdminLoginCon.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adminLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/uploadFile.java" />
-    <entry file="jar://C:/Program Files (x86)/jdk/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="148" column="13" lean-forward="false" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/aoguangcheng/apache-maven-3.5.0/Repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/aoguangcheng/apache-maven-3.5.0/Repository/org/springframework/spring-beans/5.2.0.RELEASE/spring-beans-5.2.0.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1246" column="0" lean-forward="false" selection-start-line="1246" selection-start-column="0" selection-end-line="1246" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/aoguangcheng/apache-maven-3.5.0/Repository/org/springframework/boot/spring-boot-autoconfigure/2.2.0.RELEASE/spring-boot-autoconfigure-2.2.0.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="106" column="50" lean-forward="false" selection-start-line="106" selection-start-column="50" selection-end-line="106" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/jdk/src.zip!/java/net/SocketInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/userInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="54" column="53" lean-forward="false" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/summaryClassifynameDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="150" column="5" lean-forward="false" selection-start-line="148" selection-start-column="43" selection-end-line="150" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3556#3557#0" expanded="false" />
-            <element signature="e#3594#3595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/AdminInfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/AdminInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/SummaryClassifyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/SummaryClassifyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#528#529#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/SummaryClassify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#509#510#0" expanded="false" />
-            <element signature="e#547#548#0" expanded="false" />
-            <element signature="e#580#581#0" expanded="false" />
-            <element signature="e#633#634#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#765#766#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#897#898#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/DetailClassifyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="81" lean-forward="false" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/DetailClassify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-          <folding>
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#736#737#0" expanded="false" />
-            <element signature="e#787#788#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#915#916#0" expanded="false" />
-            <element signature="e#983#984#0" expanded="false" />
-            <element signature="e#1043#1044#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-            <element signature="e#1131#1132#0" expanded="false" />
-            <element signature="e#1201#1202#0" expanded="false" />
-            <element signature="e#1263#1264#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/uploadpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="46" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/DetailClassifyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/addgoods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registerPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/RandomStringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2436">
-          <caret line="87" column="9" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="87" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1001#1002#0" expanded="false" />
-            <element signature="e#1036#1037#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/GoodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/UploadConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-957">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-885">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="71" lean-forward="true" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/config/UploadImageConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userRelease.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="35" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1551,43 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addgoods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userPutdown.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/pic/pic2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1598,60 +1293,471 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pic/pic1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/homepage.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pic/pic1.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods.html" />
+    <entry file="jar://C:/aoguangcheng/apache-maven-3.5.0/Repository/org/springframework/boot/spring-boot-autoconfigure/2.2.0.RELEASE/spring-boot-autoconfigure-2.2.0.RELEASE.jar!/org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="256">
+          <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/detailGoods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="145">
+          <caret line="85" column="53" lean-forward="true" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/LeaveMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/LeaveMessageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/LeaveMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="30" />
+          <folding>
+            <element signature="e#1092#1093#0" expanded="false" />
+            <element signature="e#1122#1123#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Star.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#543#544#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#718#719#0" expanded="false" />
+            <element signature="e#765#766#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#837#838#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/registerPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="59" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/RegisterCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="67" column="34" lean-forward="false" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+          <folding>
+            <element signature="e#899#900#0" expanded="false" />
+            <element signature="e#936#937#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/UserCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LeaveMessageCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="35" column="85" lean-forward="false" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adminLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editGoods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registerPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/uploadpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addgoods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userPutdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userSold.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/StarTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#928#935#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/LoginCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userStar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-508">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/BrowseRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
-          <folding />
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
+            <element signature="e#852#853#0" expanded="false" />
+            <element signature="e#886#887#0" expanded="false" />
+            <element signature="e#916#917#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="false" />
+            <element signature="e#1000#1001#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecord.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userRelease.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="31" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userBrowseRecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/StarCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="65" column="50" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="65" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2445#2452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/StarDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/BrowseRecordCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="32" column="66" lean-forward="false" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1069#1076#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/GoodsCon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+        <state relative-caret-position="-73">
+          <caret line="119" column="49" lean-forward="false" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1428">
+          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goodsListBody.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/detailGoods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="4495">
+          <caret line="155" column="86" lean-forward="false" selection-start-line="155" selection-start-column="77" selection-end-line="155" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3046#3052#0" expanded="true" />
+            <element signature="e#3053#3059#0" expanded="true" />
+            <element signature="e#3060#3066#0" expanded="true" />
+            <element signature="e#3067#3073#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/order/payPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1015">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="928">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/BrowseRecordDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/BrowseRecordTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/GoodsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/dao/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ctgu/jiujiu_usedcar/entity/OrderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#3210#3211#0" expanded="true" />
+            <element signature="e#3242#3243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3328">
+          <caret line="119" column="12" lean-forward="true" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+          <folding>
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1600#1601#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+            <element signature="e#1902#1903#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#2004#2005#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2071#2072#0" expanded="true" />
+            <element signature="e#2099#2100#0" expanded="true" />
+            <element signature="e#2142#2143#0" expanded="true" />
+            <element signature="e#2176#2177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ctgu/jiujiu_usedcar/controller/OrderCon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

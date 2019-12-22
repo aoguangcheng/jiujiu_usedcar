@@ -51,7 +51,7 @@ public class UserCon {
                                @RequestParam("build") String build,
                                Model model,
                                HttpSession session) throws  Exception{
-        User user = new User();
+        User user = (User)session.getAttribute("user");
         user.setTelenum(telenum);
         user.setPassword(password);
         user.setNickname(nickname);

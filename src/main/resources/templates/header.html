@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" s>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <script src="https://heerey525.github.io/layui-v2.4.3/layui/layui.js"></script>
+    <link rel="stylesheet" href="https://heerey525.github.io/layui-v2.4.3/layui/css/layui.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">登录</a>-->
+<!--<a th:if="${session.user} == null" th:href="@{/toregisterPage}">注册</a>-->
+<!--<a th:if="${session.user} != null" th:href="@{/tologinout}">退出登录</a>-->
+<!--<span th:if="${session.user} == null">未登录</span>-->
+<!--<span th:if="${session.user}  != null" th:text="${session.user.getNickname()}">用户名</span>-->
+<!--<a th:if="${session.user} != null" th:href="@{/touserInfo}">个人中心</a>-->
+<!--session存在，则点击标签进行用户操作，否则进行登录-->
+<!--<a th:if="${session.user} != null" th:href="@{/toaddGoods}">发布物品</a>-->
+<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">发布物品</a>-->
+<!--<a th:if="${session.user} != null" th:href="@{/touserRelease}">我的发布</a>-->
+<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">我的发布</a>-->
+<!--<a th:if="${session.user} != null" th:href="@{/touserPutdown}">我的下架</a>-->
+<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">我的下架</a>-->
+<!--<a th:if="${session.user} != null" th:href="@{/touserSold}">已出手</a>-->
+<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">已出手</a>-->
+
+<!--<img th:if="${session.user} != null" th:src="@{${session.user.getHeadicon()}}" alt="头像" width="60" height="40">-->
+
+<div class="layui-row">
+    <div class="layui-container" th:fragment="topbar">
+
+        <ul class="layui-nav layui-bg-green">
+            <li class="layui-nav-item">
+                <a href="" th:href="@{/}">首页<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item" th:if="${session.user} == null">
+                <a href="" th:href="@{/tologinPage}">登录<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item" th:if="${session.user} == null">
+                <a href="" th:href="@{/toregisterPage}">注册<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item ">
+                <a href="">通知<span class="layui-badge">9</span></a>
+            </li>
+
+            <li class="layui-nav-item" lay-unselect="">
+                <a href="javascript:;">物品</a>
+                <dl class="layui-nav-child">
+                    <dd><a th:if="${session.user} != null" th:href="@{/toaddGoods}">发布物品</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">发布物品</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/touserRelease}">我的发布</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">我的发布</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/touserPutdown}">我的下架</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">我的下架</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/touserSold}">已出手</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">已出手</a></dd>
+
+                </dl>
+            </li>
+            <li class="layui-nav-item" lay-unselect="">
+                <a href="javascript:;">订单</a>
+                <dl class="layui-nav-child">
+                    <dd><a th:if="${session.user} != null" th:href="@{/toaddGoods}">我的下单</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">我的下单</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/touserRelease}">我的售卖</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">我的售卖</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/touserPutdown}">完结订单</a></dd>
+                    <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">完结订单</a></dd>
+                    <!--<dd><a th:if="${session.user} != null" th:href="@{/touserSold}">已出手</a></dd>-->
+                    <!--<dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">已出手</a></dd>-->
+
+                </dl>
+            </li>
+            <li class="layui-nav-item" lay-unselect="" th:if="${session.user} == null">
+                <a href="javascript:;" th:href="@{/tologinPage}"><img src="//t.cn/RCzsdCq" class="layui-nav-img">
+                    <span th:if="${session.user} == null">未登录</span>
+                    <span th:if="${session.user}  != null" th:text="${session.user.getNickname()}">用户名</span>
+                </a>
+                <dl class="layui-nav-child">
+                    <a href="" th:href="@{/tologinPage}">个人中心<span class="layui-badge-dot"></span></a>
+                    <dd><a href="javascript:;" th:href="@{/tologinPage}">退出登录</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" lay-unselect="" th:if="${session.user} != null">
+                <a href="javascript:;"><img src="//t.cn/RCzsdCq" th:src="@{${session.user.getHeadicon()}}" class="layui-nav-img">
+                    <span th:if="${session.user} == null">未登录</span>
+                    <span th:if="${session.user}  != null" th:text="${session.user.getNickname()}">用户名</span>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="" th:if="${session.user} != null" th:href="@{/touserStar}">我的收藏<span class="layui-badge-dot"></span></a></dd>
+                    <dd><a href="" th:if="${session.user} != null" th:href="@{/touserBrowseRecord}">浏览记录<span class="layui-badge-dot"></span></a></dd>
+                    <dd><a href="" th:if="${session.user} != null" th:href="@{/touserStar}">个人中心<span class="layui-badge-dot"></span></a></dd>
+                    <dd><a href="javascript:;" th:if="${session.user} != null" th:href="@{/tologinout}">退出登录</a></dd>
+
+                </dl>
+            <li class="layui-nav-item">
+
+
+            </li>
+            </li>
+
+        </ul>
+
+        <script>
+            //注意：导航 依赖 element 模块，否则无法进行功能性操作
+            layui.use('element', function() {
+                var element = layui.element;
+
+                //…
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>

@@ -2,38 +2,269 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>详细信息</title>
     <script src="layui/layui.js"></script>
     <link rel="stylesheet" href="layui/css/layui.css" />
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://heerey525.github.io/layui-v2.4.3/layui/layui.js"></script>
     <link rel="stylesheet" href="https://heerey525.github.io/layui-v2.4.3/layui/css/layui.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-<div class="layui-carousel" id="test1">
-    <div carousel-item>
-        <div>条目1</div>
-        <div>条目2</div>
-        <div>条目3</div>
+<div class="layui-row">
+    <div th:insert="~{header::topbar}"></div>
+</div>
+<div class="layui-row">
+    <div class="layui-col-md4 layui-col-lg-offset1">
+        <div style="padding: 10px; background-color: #F2F2F2;">
+            <div class="layui-card">
+                <div class="layui-card-header">图片</div>
+                <div class="layui-card-body">
+                    <div class="layui-carousel" id="test1">
+                        <div carousel-item>
+                            <div>
+                                <img src="pic/pic1.jpg" th:src="@{${goods.getPic1()}}" width="450" height="300">
+                            </div>
+                            <div>
+                                <img src="pic/pic2.jpg" th:src="@{${goods.getPic2()}}" width="450" height="300">
+                            </div>
+                            <div>
+                                <img src="pic/pic3.jpg" th:src="@{${goods.getPic1()}}" width="450" height="300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!--描述、分类、价格、发布者、收藏人数、购买评价-->
+    </div>
+    <div class="layui-hide-md4 layui-col-lg-offset6">
 
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">详细描述：</div>
+                    <div class="layui-card-body">
+                        <span th:text="${goods.getDescription()}">数据获取失败或者发布者未添加描述</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">价格：
+                        <span th:text="${goods.getPrice()}">999.9</span>
+                        <span th:text="'&emsp; &emsp; &emsp; &emsp;分类：#'+ ${goods.getSummaryClassifyname()}+ ' #' + ${goods.getDetailClassifyname()}">分类：手机数码</span></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        <span th:text="'发布者：' + ${goods.getOwner()}">发布者：admin</span>
+                        <span th:text="'&emsp; &emsp; &emsp; &emsp;收藏数量:' + ${goods.getStarCount()}"> &emsp; &emsp; &emsp; &emsp;收藏数量：89</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">评价：</div>
+                    <div class="layui-card-body">
+                        <span th:text="${goods.getPurComment()}">评价</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:if="${session.user} == null">
+            <div class="layui-col-md10">
+                <div style="padding: 10px; background-color: #F2F2F2;">
+                    <div class="layui-card">
+                        <div class="layui-card-body">
+                            <div class="layui-col-md12">
+                                <form class="layui-form" action="">
+                                    <div class="layui-form">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <span>您还未登录，请登录后执行更多操作</span>
+                                                <a class="layui-btn" lay-submit lay-filter="formDemo" th:href="@{/tologinPage}">登录</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div th:if="${session.user} != null">
+            <div class="layui-col-md10">
+                <div style="padding: 10px; background-color: #F2F2F2;">
+                    <div class="layui-card">
+                        <div class="layui-col-md12" th:if="${session.goodsobj.getState()} == 3">
+                            <label class="layui-form-label">已出售，</label>
+                            <label class="layui-form-label">不允许修改</label>
+                        </div>
+                        <div th:if="${session.goodsobj.getState()} != 3">
+                            <div class="layui-col-md6" th:if="${session.user.getTelenum()} eq ${goods.getOwner()}">
+                                <form class="layui-form" action="" th:action="@{/toeditGoodsPage}">
+                                    <div class="layui-form">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <button class="layui-btn" lay-submit lay-filter="formDemo">修改</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6" th:if="${session.user.getTelenum()} ne ${goods.getOwner()}">
+                            <div th:if="${session.star.size()} == 0">
+                                <form class="layui-form" action="" th:action="@{/tostarGoods}">
+                                    <div class="layui-form">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <button class="layui-btn" lay-submit lay-filter="formDemo">收藏</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div th:if="${session.star.size()} != 0">
+                                <form class="layui-form" action="" th:action="@{/tocancleStarGoods}">
+                                    <div class="layui-form">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <button class="layui-btn" lay-submit lay-filter="formDemo">取消收藏</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6" th:if="${session.user.getTelenum()} ne ${goods.getOwner()}">
+                            <form class="layui-form" action="" th:action="@{/topayPage}">
+                                <div class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <a class="layui-btn" lay-submit lay-filter="formDemo">购买</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div th:if="${session.user.getTelenum()} eq ${goods.getOwner()}">
+                            <div class="layui-col-md6" th:if="${session.goodsobj.getState()} == 1">
+                                <form class="layui-form" action="" th:action="@{/toPutdownGoods}">
+                                    <div class="layui-form" >
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <button class="layui-btn" lay-submit lay-filter="formDemo" >下架</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="layui-col-md6" th:if="${session.goodsobj.getState()} == 2">
+                                <form class="layui-form" action="" th:action="@{/toPutUpGoods}">
+                                    <div class="layui-form">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <button class="layui-btn" lay-submit lay-filter="formDemo">上架</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="layui-row" th:if="${session.user} != null">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+        <div style="padding: 10px; background-color: #F2F2F2;">
+            <form class="layui-form" action="" th:action="@{/tosubmitMessage}">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">留言：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="message" required  lay-verify="required" placeholder="请输入留言" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">发布留言</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div th:each="leaveMessage:${leaveMessageList}">
+    <div class="layui-row">
+        <div class="layui-col-md10 layui-col-lg-offset1">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        <span th:text="${leaveMessage.getTelenum()} +' &emsp; &emsp; &emsp;发布于 &emsp;'+${leaveMessage.getDate()}"></span>
+                    </div>
+                    <div class="layui-card-body">
+                        <span th:text="${leaveMessage.getMessage()}">留言</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<!--描述、分类、价格、发布者、收藏人数、购买评价-->
+
 <!-- 条目中可以是任意内容，如：<img src=""> -->
 
 <script src="/static/build/layui.js"></script>
 <script>
-    layui.use('carousel', function(){
+    layui.use('carousel', function() {
         var carousel = layui.carousel;
         //建造实例
         carousel.render({
-            elem: '#test1'
-            ,width: '100%' //设置容器宽度
-            ,arrow: 'always' //始终显示箭头
+            elem: '#test1',
+            width: '100%' //设置容器宽度
+            ,
+            arrow: 'always' //始终显示箭头
             //,anim: 'updown' //切换动画方式
         });
     });
 </script>
+<!--<script>-->
+<!--//Demo-->
+<!--layui.use('form', function(){-->
+<!--var form = layui.form;-->
+
+<!--//监听提交-->
+<!--form.on('submit(formDemo)', function(data){-->
+<!--layer.msg(JSON.stringify(data.field));-->
+<!--return false;-->
+<!--});-->
+<!--});-->
+<!--</script>-->
 </body>
 </html>

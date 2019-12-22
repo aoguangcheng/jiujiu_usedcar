@@ -9,6 +9,9 @@
 </head>
 
 <body>
+<div class="layui-row">
+    <div th:insert="~{header::topbar}"></div>
+</div>
 <form class="layui-form" action="" th:action="@{/toregister}" method="post" enctype="multipart/form-data">
     <div class="layui-form-item">
         <label class="layui-form-label">手机号</label>

@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 20%;
+        }
+        .center-in-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
     <script src="layui/layui.js"></script>
     <link rel="stylesheet" href="layui/css/layui.css" />
 </head>
 <body>
+<div class="layui-row">
+    <div th:insert="~{header::topbar}"></div>
+</div>
+<div class="center-in-center">
+<div class="layui-row">
+    <div class="layui-col-md4 layui-col-lg-offset4">
+
 <form class="layui-form" action="" th:action="@{/submitInfo}">
     <div class="layui-form-item">
         <label class="layui-form-label">手机号</label>
@@ -16,12 +42,17 @@
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">密码</label>
-        <div class="layui-input-inline">
+        <label class="layui-form-label">密&emsp;码</label>
+        <div class="layui-input-block">
             <input type="password" name="password" required lay-verify="required"  placeholder="请输入密码" autocomplete="off" class="layui-input">
         </div>
-        <div>
-            请输入验证码:<span th:text="${VerificationCode}"></span>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">验证码</label>
+            <div class="layui-input-block">
+                    <!--<span th:text="${VerificationCode}"></span>-->
+                <label class="layui-form-label" th:text="${VerificationCode}">验证码</label>
+            </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">验证码</label>
@@ -43,5 +74,8 @@
         </div>
     </div>
 </form>
+    <!--</div>-->
+</div>
+</div>
 </body>
 </html>

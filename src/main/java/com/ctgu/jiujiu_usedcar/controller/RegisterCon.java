@@ -65,6 +65,7 @@ public class RegisterCon {
         user.setMajor(major);
         //user.setHobby(hobby.get(0));
         user.setBalance("0");
+        user.setInfoIntegrity(88);
         user.setDormitory(dormitory+build + "#");
         // 获取上传文件名
         String oldfilename = file.getOriginalFilename();

@@ -37,7 +37,7 @@ public class LoginCon {
     {
         List<Goods> goods = goodsDao.findAllByState(1);
         model.addAttribute("goodsList",goods);
-        model.addAttribute("user",userDao.findByTelenum("admin").get(0));
+//        model.addAttribute("user",userDao.findByTelenum("admin").get(0));
         model.addAttribute("userStatus","未登录");
         return "homePage";
     }
@@ -52,7 +52,7 @@ public class LoginCon {
     public String tologinout(HttpSession session,Model model){
         session.removeAttribute("user");
         model.addAttribute("userStatus","未登录");
-        return "homepage";
+        return "redirect:/";
     }
 //在登录界面验证登录
     @RequestMapping("submitInfo")

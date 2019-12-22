@@ -22,36 +22,48 @@
 
 <!--<img th:if="${session.user} != null" th:src="@{${session.user.getHeadicon()}}" alt="头像" width="60" height="40">-->
 
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>我的下架</legend>
-</fieldset>
-<!--<tr th:each="c:${list}">-->
 <div class="layui-row">
-    <div class="layui-card">
+    <div th:insert="~{header::topbar}"></div>
+</div>
+<div class="layui-col-md10 layui-col-lg-offset1">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>我的下架</legend>
+    </fieldset>
+</div>
+<!--<tr th:each="c:${list}">-->
+
+<div class="layui-row">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+
         <div th:each="goodsList:${goodsList}">
-            <div class="layui-col-md3">
-                <div style="padding: 20px; background-color: #F2F2F2;">
-                    <div class="layui-col-md12">
-                        <div class="layui-card-body">
-                            <img th:src="@{${goodsList.getPic1()}}" alt="图片" height="200" width="280">
-                        </div>
-                    </div>
-                    <div class="layui-col-md12">
-                        <div class="layui-card-header" th:text="'#'+${goodsList.getSummaryClassifyname()}+'#'+${goodsList.getDetailClassifyname()}">分类
-                        </div>
-                    </div>
-                    <!--文字信息-->
-                    <div class="layui-col-md12">
-                        <div class="layui-card">
-                            <div class="layui-card-header">价格：
-                                <span th:text="${goodsList.getPrice()}">价格未知</span>
+            <div class="layui-card">
+                <div class="layui-col-md3">
+                    <div style="padding: 2px; background-color: #F2F2F2;">
+                        <div class="layui-col-md12">
+                            <div class="layui-card-body">
+                                <a href="addgoods.html" th:href="@{/todetailGoods/} + ${goodsList.getGoodNum()}">
+                                    <img th:src="@{${goodsList.getPic1()}}" alt="图片" height="160" width="250"></a>
                             </div>
-                            <div class="layui-card-body">描述：
-                                <span th:text="${goodsList.getDescription()}">无描述</span>
+                            <div class="layui-col-md12">
+                                <div class="layui-card-header" th:text="'#'+${goodsList.getSummaryClassifyname()}+'#'+${goodsList.getDetailClassifyname()}">分类
+                                </div>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">价格：
+                                        <span th:text="${goodsList.getPrice()}">价格未知</span>
+                                    </div>
+                                    <div class="layui-card-body">描述：
+                                        <span th:text="${goodsList.getDescription()}">无描述</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <!--文字信息-->
+
+                        <!--、、、、、、-->
                     </div>
-                    <!--、、、、、、-->
                 </div>
             </div>
         </div>

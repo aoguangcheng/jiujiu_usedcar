@@ -2,32 +2,133 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>详细信息</title>
     <script src="layui/layui.js"></script>
     <link rel="stylesheet" href="layui/css/layui.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://heerey525.github.io/layui-v2.4.3/layui/layui.js"></script>
+    <link rel="stylesheet" href="https://heerey525.github.io/layui-v2.4.3/layui/css/layui.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-<div class="layui-carousel" id="test1">
-    <div carousel-item>
-        <div>条目1</div>
-        <div>条目2</div>
-        <div>条目3</div>
-        <div>条目4</div>
-        <div>条目5</div>
+<div class="layui-row">
+    <div class="layui-col-md4 layui-col-lg-offset1">
+        <div style="padding: 10px; background-color: #F2F2F2;">
+        <div class="layui-card">
+            <div class="layui-card-header">图片</div>
+            <div class="layui-card-body">
+                <div class="layui-carousel" id="test1">
+                    <div carousel-item >
+                        <div>
+                            <img src="pic/pic1.jpg" th:src="@{${goods.getPic1()}}" width="450" height="300">
+                        </div>
+                        <div>
+                            <img src="pic/pic2.jpg" th:src="@{${goods.getPic2()}}" width="450" height="300">
+                        </div>
+                        <div>
+                            <img src="pic/pic3.jpg" th:src="@{${goods.getPic1()}}" width="450" height="300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="layui-hide-md4 layui-col-lg-offset6">
+
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">详细描述：</div>
+                    <div class="layui-card-body">
+                        <span>卡片式面板面板通常用于非白色背景色的主体内</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">价格：
+                        <span>999.9</span>
+                        <span>分类：手机数码</span></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        <span>发布者：admin</span>
+                        <span> 收藏数量：89</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md10">
+            <div style="padding: 10px; background-color: #F2F2F2;">
+                <div class="layui-card">
+                    <div class="layui-card-header">评价：</div>
+                    <div class="layui-card-body">
+                        <span>评价</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div style="padding: 10px; background-color: #F2F2F2;">
+                    <div class="layui-card">
+                        <!--<div class="layui-card-header">评价：</div>-->
+                        <div class="layui-card-body">
+                            <div class="layui-form">
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block">
+                                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<div class="layui-row">
+    <div class="layui-col-md4 layui-col-lg-offset1">
+        <div style="padding: 10px; background-color: #F2F2F2;">
+            <div class="layui-card">
+                <div class="layui-card-header">详细描述：</div>
+                <div class="layui-card-body">
+                    <span>卡片式面板面板通常用于非白色背景色的主体内</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--描述、分类、价格、发布者、收藏人数、购买评价-->
+
 <!-- 条目中可以是任意内容，如：<img src=""> -->
 
 <script src="/static/build/layui.js"></script>
 <script>
-    layui.use('carousel', function(){
+    layui.use('carousel', function() {
         var carousel = layui.carousel;
         //建造实例
         carousel.render({
-            elem: '#test1'
-            ,width: '100%' //设置容器宽度
-            ,arrow: 'always' //始终显示箭头
+            elem: '#test1',
+            width: '100%' //设置容器宽度
+            ,
+            arrow: 'always' //始终显示箭头
             //,anim: 'updown' //切换动画方式
         });
     });
