@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+<div class="layui-row">
+    <div th:insert="~{header::topbar}"></div>
+</div>
+
+<!--goodsList-->
+<!--<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">-->
+<!--<legend>卡片面板</legend>-->
+<!--</fieldset>-->
+<!--<tr th:each="c:${list}">-->
+<div>
+    <br/>
+    <br/>
+</div>
+
+<div class="layui-row">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+        <form class="layui-form" action="" th:action="@{/queryUerOrGoods}" method="post" enctype="multipart/form-data">
+
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <select  name="userOrGoods"  lay-verify="required">
+                        <option value="物品" selected="selected" >物品</option>
+                        <option value="用户"  >用户</option>
+
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <select id="province"  name="summary_classifyname" lay-verify="required" lay-filter="cityfilter">
+                        <option value="请选择分类" selected="selected">请选择分类</option>
+                        <option value="数码电子">数码电子</option>
+                        <option value="生活日用">生活日用</option>
+                        <option value="男装">男装</option>
+                        <option value="女装">女装</option>
+                    </select>
+                </div>
+
+                <div class="layui-input-inline">
+                    <select  name="detail_classifyname" id="cityid" lay-verify="required">
+                        <option value="请选择分类" selected="selected" >请选择分类</option>
+
+                    </select>
+                </div>
+                <!--<div class="layui-form-mid layui-word-aux">请选择分类</div>-->
+                <div class="layui-input-inline">
+                    <input type="text" name="key" required lay-verify="required" value="物品" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-input-inline">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">查询</button>
+                        <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div>
+    <br/>
+    <br/>
+</div>
+
+<div class="layui-row">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+
+        <div th:each="goodsList:${goodsList}">
+            <div class="layui-card">
+                <div class="layui-col-md3">
+                    <div style="padding: 2px; background-color: #F2F2F2;">
+                        <div class="layui-col-md12">
+                            <div class="layui-card-body">
+                                <a href="../goods/addgoods.html" th:href="@{/todetailGoods/} + ${goodsList.getGoodNum()}">
+                                    <img th:src="@{${goodsList.getPic1()}}" alt="图片" height="160" width="250"></a>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card-header" th:text="'#'+${goodsList.getSummaryClassifyname()}+'#'+${goodsList.getDetailClassifyname()}">分类
+                                </div>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">价格：
+                                        <span th:text="${goodsList.getPrice()}">价格未知</span>
+                                    </div>
+                                    <div class="layui-card-body">描述：
+                                        <!--${#strings.abbreviate(str,10)}-->
+                                        <!--<span th:text="${goodsList.getDescription()}">无描述</span>-->
+                                        <span th:text="${#strings.abbreviate(goodsList.getDescription(),15)}">无描述</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--文字信息-->
+                        <!--、、、、、、-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="layui-row">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+
+        <div th:each="goodsList:${userList}">
+            <div class="layui-card">
+                <div class="layui-col-md3">
+                    <div style="padding: 2px; background-color: #F2F2F2;">
+                        <div class="layui-col-md12">
+                            <div class="layui-card-body">
+                                <a href="../goods/addgoods.html" th:href="@{/todetailUser/} + ${goodsList.getTelenum()}">
+                                    <img th:src="@{${goodsList.getHeadicon()}}" alt="头像" height="160" width="250"></a>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card-header" th:text="'来自'+${goodsList.getDwells()}">地区
+                                </div>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">专业：
+                                        <span th:text="'#'+${goodsList.getGrade()}+'#'+${goodsList.getCollege()}+'#'+${goodsList.getMajor()}">未知</span>
+                                    </div>
+                                    <!--<div class="layui-card-body">描述：-->
+                                        <!--&lt;!&ndash;${#strings.abbreviate(str,10)}&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<span th:text="${goodsList.getDescription()}">无描述</span>&ndash;&gt;-->
+                                        <!--<span th:text="${#strings.abbreviate(goodsList.getDescription(),15)}">无描述</span>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--文字信息-->
+                        <!--、、、、、、-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+        layui.form.on('select(cityfilter)', function (data) {
+            if (data.value == "") {
+                $('#cityid').html('<option >请选择分类</option>');
+                layui.form.render("select");
+            }
+            else {
+                if (data.value == "数码电子") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("手机", "手机"));
+                    $('#cityid').append(new Option("耳机", "耳机"));
+                    $('#cityid').append(new Option("笔记本电脑", "笔记本电脑"));
+                }
+                else if (data.value == "生活日用") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("五金工具", "五金工具"));
+                    $('#cityid').append(new Option("办公用品", "办公用品"));
+                    $('#cityid').append(new Option("保健护理", "保健护理"));
+                }
+                else if (data.value == "男装") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("上衣", "上衣"));
+                    $('#cityid').append(new Option("裤子", "裤子"));
+                }
+                else if (data.value == "女装") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("外套", "外套"));
+                    $('#cityid').append(new Option("裙装", "裙装"));
+                    $('#cityid').append(new Option("裤子", "裤子"));
+                }
+                layui.form.render("select");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

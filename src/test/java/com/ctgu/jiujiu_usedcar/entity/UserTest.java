@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserTest {
@@ -18,6 +20,15 @@ public class UserTest {
     @Test
     public void getUserByTelenum(){
         System.out.println(userDao.findByTelenum("admin").toString());
+    }
+
+    @Test
+    public void getUserByNickname(){
+        List<User> userList = userDao.findByNicknameLike("%敖%");
+        for(User user : userList)
+        {
+            System.out.println(user);
+        }
     }
 
 }

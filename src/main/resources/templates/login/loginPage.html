@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"s>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 20%;
+        }
+        .center-in-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" />
+</head>
+<body>
+<div class="layui-row">
+    <div th:insert="~{header::topbar}"></div>
+</div>
+<div class="center-in-center">
+<div class="layui-row">
+    <div class="layui-col-md4 layui-col-lg-offset4">
+
+<form class="layui-form" action="" th:action="@{/submitInfo}">
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号</label>
+        <div class="layui-input-block">
+            <input type="text" name="telenum" required  lay-verify="required"  placeholder="请输入标题" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密&emsp;码</label>
+        <div class="layui-input-block">
+            <input type="password" name="password" required lay-verify="required"  placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+
+        <span th:text="${VerificationCode}" style="display:none" th:id="yanzheng01"></span>
+        <div>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <canvas id="canvas" width="110" height="30"></canvas>
+            <!--<a href="#" id="changeImg" th:action="@{/updatacode}">看不清，换一张</a>-->
+            <br><br>
+
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">验证码</label>
+            <div class="layui-input-block">
+                <input type="text" name="SubmitVerificationCode" required  lay-verify="required"  placeholder="请输入验证码" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+
+        <div>
+            <!--<span th:text="'验证码错误，请重新输入'"></span>-->
+            <span th:if="${tips} == '验证码不正确'">验证码不正确，请重新输入</span>
+            <a th:if="${tips} == '未注册'" th:href="@{/toregisterPage}" href="../../static/registerPage.html">您还未注册，去注册</a>
+            <span th:if="${tips} == '密码错误'">账号或者密码有误，请重新输入</span>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#ValidateCode").click(function() {
+            //在执行的方法路径后面加上时间戳或者随机数是处理浏览器页面缓存的问题。
+            //浏览器是基于url进行缓存，如果页面允许缓存，则在一定的时间内再次访问相同的url
+            //浏览器就不会发送请求到服务器，而是直接从缓存中获取指定的资源。
+            //我们需要实现每一次点击验证码的切换，就必须使用随机数或者时间戳。
+            $("#ValidateCode").attr("src", "validCodeServlet?time=" + new Date().getTime());
+        });
+
+    </script>
+</form>
+    <!--</div>-->
+</div>
+</div>
+</div>
+
+<script>
+    /**生成一个随机数**/
+    function randomNum(min,max){
+        return Math.floor( Math.random()*(max-min)+min);
+    }
+    /**生成一个随机色**/
+    function randomColor(min,max){
+        var r = randomNum(min,max);
+        var g = randomNum(min,max);
+        var b = randomNum(min,max);
+        return "rgb("+r+","+g+","+b+")";
+    }
+    drawPic();
+    // document.getElementById("changeImg").onclick = function(e){
+    //     e.preventDefault();
+    //     drawPic();
+    // }
+
+    /**绘制验证码图片**/
+    function drawPic(){
+        var canvas=document.getElementById("canvas");
+        var width=canvas.width;
+        var height=canvas.height;
+        var ctx = canvas.getContext('2d');
+        ctx.textBaseline = 'bottom';
+
+        /**绘制背景色**/
+        ctx.fillStyle = "#fff"; //颜色若太深可能导致看不清
+        ctx.fillRect(0,0,width,height);
+        /**绘制文字**/
+        var str = document.getElementById("yanzheng01").innerText;
+        for(var i=0; i<4; i++){
+            var txt = str[i];
+            ctx.fillStyle = "#000";  //随机生成字体颜色
+            ctx.font = 30 +'px SimHei'; //随机生成字体大小
+            var x = 10+i*25;
+            var y = 30;
+            var deg = 0;
+            //修改坐标原点和旋转角度
+            ctx.translate(x,y);
+            ctx.rotate(deg*Math.PI/180);
+            ctx.fillText(txt, 0,0);
+            //恢复坐标原点和旋转角度
+            ctx.rotate(-deg*Math.PI/180);
+            ctx.translate(-x,-y);
+        }
+        /**绘制干扰线**/
+        for(var i=0; i<8; i++){
+            ctx.strokeStyle = randomColor(40,180);
+            ctx.beginPath();
+            ctx.moveTo( randomNum(0,width), randomNum(0,height) );
+            ctx.lineTo( randomNum(0,width), randomNum(0,height) );
+            ctx.stroke();
+        }
+        /**绘制干扰点**/
+        for(var i=0; i<100; i++){
+            ctx.fillStyle = randomColor(0,255);
+            ctx.beginPath();
+            ctx.arc(randomNum(0,width),randomNum(0,height), 1, 0, 2*Math.PI);
+            ctx.fill();
+        }
+    }
+</script>
+
+
+</body>
+</html>

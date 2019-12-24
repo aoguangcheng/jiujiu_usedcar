@@ -3,7 +3,7 @@ package com.ctgu.jiujiu_usedcar.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orderinfo")
 public class Order {
 
     @Id
@@ -32,17 +32,21 @@ public class Order {
     @Column(name = "state")
     private  Integer state;
 
+    @Column(name = "pic")
+    private String pic;
+
     public Order() {
     }
 
-    public Order(Integer goodNum, String buyer, String seller, String description, String date, String price, Integer state) {
-        this.goodnum = goodNum;
+    public Order(Integer goodnum, String buyer, String seller, String description, String date, String price, Integer state, String pic) {
+        this.goodnum = goodnum;
         this.buyer = buyer;
         this.seller = seller;
         this.description = description;
         this.date = date;
         this.price = price;
         this.state = state;
+        this.pic = pic;
     }
 
     public Integer getOrderid() {
@@ -53,12 +57,12 @@ public class Order {
         this.orderid = orderid;
     }
 
-    public Integer getGoodNum() {
+    public Integer getGoodnum() {
         return goodnum;
     }
 
-    public void setGoodNum(Integer goodNum) {
-        this.goodnum = goodNum;
+    public void setGoodnum(Integer goodnum) {
+        this.goodnum = goodnum;
     }
 
     public String getBuyer() {
@@ -109,17 +113,26 @@ public class Order {
         this.state = state;
     }
 
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
                 "orderid=" + orderid +
-                ", goodNum=" + goodnum +
+                ", goodnum=" + goodnum +
                 ", buyer='" + buyer + '\'' +
                 ", seller='" + seller + '\'' +
                 ", description='" + description + '\'' +
                 ", date='" + date + '\'' +
                 ", price='" + price + '\'' +
                 ", state=" + state +
+                ", pic='" + pic + '\'' +
                 '}';
     }
 }

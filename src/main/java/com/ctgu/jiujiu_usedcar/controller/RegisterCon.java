@@ -27,12 +27,12 @@ public class RegisterCon {
     @RequestMapping("toregisterPage")
     public String toregisterPage()
     {
-        return "registerPage";
+        return "login/registerPage";
     }
 
     @RequestMapping("homePage")
     public String tohomePage(){
-        return "redirect:/";
+        return "redirect:/home";
     }
 
     @RequestMapping("toregister")
@@ -93,6 +93,6 @@ public class RegisterCon {
         userDao.save(user);
         session.setAttribute("user",user);
         model.addAttribute("userStatus","已登录");
-        return "redirect:/";
+        return "redirect:/home";
     }
 }

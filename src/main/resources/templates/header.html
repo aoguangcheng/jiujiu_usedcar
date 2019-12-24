@@ -34,7 +34,7 @@
 
         <ul class="layui-nav layui-bg-green">
             <li class="layui-nav-item">
-                <a href="" th:href="@{/}">首页<span class="layui-badge-dot"></span></a>
+                <a href="" th:href="@{/home}">首页<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item" th:if="${session.user} == null">
                 <a href="" th:href="@{/tologinPage}">登录<span class="layui-badge-dot"></span></a>
@@ -63,11 +63,11 @@
             <li class="layui-nav-item" lay-unselect="">
                 <a href="javascript:;">订单</a>
                 <dl class="layui-nav-child">
-                    <dd><a th:if="${session.user} != null" th:href="@{/toaddGoods}">我的下单</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/toorderApply}">我的下单</a></dd>
                     <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">我的下单</a></dd>
-                    <dd><a th:if="${session.user} != null" th:href="@{/touserRelease}">我的售卖</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/toorderSold}">我的售卖</a></dd>
                     <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">我的售卖</a></dd>
-                    <dd><a th:if="${session.user} != null" th:href="@{/touserPutdown}">完结订单</a></dd>
+                    <dd><a th:if="${session.user} != null" th:href="@{/toorderFinish}">完结订单</a></dd>
                     <dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">完结订单</a></dd>
                     <!--<dd><a th:if="${session.user} != null" th:href="@{/touserSold}">已出手</a></dd>-->
                     <!--<dd><a th:if="${session.user} == null" th:href="@{/tologinPage}">已出手</a></dd>-->
@@ -92,7 +92,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="" th:if="${session.user} != null" th:href="@{/touserStar}">我的收藏<span class="layui-badge-dot"></span></a></dd>
                     <dd><a href="" th:if="${session.user} != null" th:href="@{/touserBrowseRecord}">浏览记录<span class="layui-badge-dot"></span></a></dd>
-                    <dd><a href="" th:if="${session.user} != null" th:href="@{/touserStar}">个人中心<span class="layui-badge-dot"></span></a></dd>
+                    <dd><a href="" th:if="${session.user} != null" th:href="@{/touserInfo}">个人中心<span class="layui-badge-dot"></span></a></dd>
                     <dd><a href="javascript:;" th:if="${session.user} != null" th:href="@{/tologinout}">退出登录</a></dd>
 
                 </dl>

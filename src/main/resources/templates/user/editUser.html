@@ -70,11 +70,12 @@
             </div>
         </div>
     </div>
+
     <div class="layui-form-item">
         <label class="layui-form-label">居住地</label>
         <div class="layui-input-inline">
-            <select id="province" onChange="nextChange()" name="province">
-                <option selected="selected">请选择省份</option>
+            <select id="province"  name="province" lay-verify="required" lay-filter="cityfilter">
+                <option value="" selected="selected">请选择省份</option>
                 <option value="北京">北京</option>
                 <option value="江苏">江苏</option>
                 <option value="湖北">湖北</option>
@@ -82,16 +83,15 @@
             </select>
         </div>
         <div class="layui-input-inline">
-            <select id="city" name="city">
-                <option selected="selected">请选择城市</option>
-                <option value="宜昌">宜昌</option>
-                <option value="荆州">荆州</option>
-                <option value="襄阳">襄阳</option>
-                <option value="武汉">武汉</option>
+            <select  name="city" id="cityid" lay-verify="required">
+                <option selected="selected" >请选择城市</option>
+
             </select>
         </div>
         <div class="layui-form-mid layui-word-aux">请选择您的居住地</div>
     </div>
+
+
     <div class="layui-form-item">
         <label class="layui-form-label">院校</label>
         <div class="layui-input-inline">
@@ -106,26 +106,20 @@
         </div>
         <!--学院-->
         <div class="layui-input-inline">
-            <select name="college" id="college">
-                <option value="" selected="selected">请选择学院</option>
-                <option value="计信">计信</option>
-                <option value="电气">电气</option>
-                <option value="水环">水环</option>
-                <option value="文传">文传</option>
-                <option value="生药">生药</option>
+            <select name="college"  lay-verify="required" lay-filter="collegefilter">
+                <option value="">请选择学院</option>
+                <option value="生物与制药学院">生物与制药学院</option>
+                <option value="医学院">医学院</option>
+                <option value="理学院">理学院</option>
+                <option value="计算机与信息学院">计算机与信息学院</option>
             </select>
         </div>
+
         <!--专业-->
         <div class="layui-input-inline">
-            <select name="major" id="major">
-                <option value="" selected="selected">请选择专业</option>
-                <option value="计科">计科</option>
-                <option value="物联">物联</option>
-                <option value="电子">电子</option>
-                <option value="通信">通信</option>
-                <option value="数媒">数媒</option>
-            </select>
+            <select name="major" id="quyuid" lay-verify="required" lay-filter="quyufilter"></select>
         </div>
+
 
         <div class="layui-form-mid layui-word-aux">请选择院校信息</div>
     </div>
@@ -184,6 +178,84 @@
         </div>
     </div>
 </form>
+
+    <script>
+        layui.use('form', function () {
+            var form = layui.form;
+            layui.form.on('select(collegefilter)', function (data) {
+                if (data.value == "") {
+                    $('#quyuid').html('<option >请选择专业</option>');
+                    layui.form.render("select");
+                }
+                else {
+                    if (data.value == "生物与制药学院") {
+                        $('#quyuid').html('<option>请选择专业</option>')
+                        $('#quyuid').append(new Option("生物工程", "生物工程"));
+                        $('#quyuid').append(new Option("制药工程", "制药工程"));
+                        $('#quyuid').append(new Option("生命科学", "生命科学"));
+                    }
+                    else if (data.value == "医学院") {
+                        $('#quyuid').html('<option>请选择专业</option>')
+                        $('#quyuid').append(new Option("中医学", "中医学"));
+                        $('#quyuid').append(new Option("临床医学", "临床医学"));
+                        $('#quyuid').append(new Option("医学影像", "医学影像"));
+                    }
+                    else if (data.value == "理学院") {
+                        $('#quyuid').html('<option>请选择专业</option>')
+                        $('#quyuid').append(new Option("数学", "数学"));
+                        $('#quyuid').append(new Option("物理学", "物理学"));
+                    }
+                    else if (data.value == "计算机与信息学院") {
+                        $('#quyuid').html('<option>请选择专业</option>')
+                        $('#quyuid').append(new Option("计科", "计科"));
+                        $('#quyuid').append(new Option("数媒", "数媒"));
+                        $('#quyuid').append(new Option("电子", "电子"));
+                        $('#quyuid').append(new Option("物联网", "物联网"));
+                    }
+                    layui.form.render("select");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        layui.use('form', function () {
+            var form = layui.form;
+            layui.form.on('select(cityfilter)', function (data) {
+                if (data.value == "") {
+                    $('#cityid').html('<option >请选择城市</option>');
+                    layui.form.render("select");
+                }
+                else {
+                    if (data.value == "湖北") {
+                        $('#cityid').html('<option>请选择城市</option>')
+                        $('#cityid').append(new Option("宜昌", "宜昌"));
+                        $('#cityid').append(new Option("襄阳", "襄阳"));
+                        $('#cityid').append(new Option("武汉", "武汉"));
+                    }
+                    else if (data.value == "北京") {
+                        $('#cityid').html('<option>请选择城市</option>')
+                        $('#cityid').append(new Option("朝阳区", "朝阳区"));
+                        $('#cityid').append(new Option("东城区", "东城区"));
+                        $('#cityid').append(new Option("海淀区", "海淀区"));
+                    }
+                    else if (data.value == "河南") {
+                        $('#cityid').html('<option>请选择城市</option>')
+                        $('#cityid').append(new Option("郑州", "郑州"));
+                        $('#cityid').append(new Option("南阳", "南阳"));
+                    }
+                    else if (data.value == "江苏") {
+                        $('#cityid').html('<option>请选择城市</option>')
+                        $('#cityid').append(new Option("南京", "南京"));
+                        $('#cityid').append(new Option("无锡", "无锡"));
+                        $('#cityid').append(new Option("柳州", "柳州"));
+                        $('#cityid').append(new Option("义乌", "义乌"));
+                    }
+                    layui.form.render("select");
+                }
+            });
+        });
+    </script>
 <script>
     layui.use('laydate', function() {
         var laydate = layui.laydate;

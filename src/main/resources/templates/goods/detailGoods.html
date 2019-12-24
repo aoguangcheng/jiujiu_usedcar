@@ -65,8 +65,10 @@
             <div style="padding: 10px; background-color: #F2F2F2;">
                 <div class="layui-card">
                     <div class="layui-card-header">
-                        <span th:text="'发布者：' + ${goods.getOwner()}">发布者：admin</span>
-                        <span th:text="'&emsp; &emsp; &emsp; &emsp;收藏数量:' + ${goods.getStarCount()}"> &emsp; &emsp; &emsp; &emsp;收藏数量：89</span>
+                        <a href="javascript:;" th:href="@{/touserDetailPage/}+${goods.getOwner()}" th:if="${session.user} != null"><span th:text="'发布者：' + ${goods.getOwner()} + '&emsp;'">发布者：admin</span><img src="//t.cn/RCzsdCq" th:src="@{${session.user.getHeadicon()}}" class="layui-nav-img"></a>
+                        <a href="javascript:;" th:href="@{/touserDetailPage/}+${goods.getOwner()}" th:if="${session.user} == null"><span th:text="'发布者：' + ${goods.getOwner()} + '&emsp;&emsp;&emsp;'">发布者：admin</span></a>
+
+                        <span th:text="'&emsp; 收藏数量:' + ${goods.getStarCount()}"> &emsp; &emsp; &emsp; &emsp;收藏数量：89</span>
                     </div>
                 </div>
             </div>
@@ -157,7 +159,7 @@
                                 <div class="layui-form">
                                     <div class="layui-form-item">
                                         <div class="layui-input-block">
-                                            <a class="layui-btn" lay-submit lay-filter="formDemo">购买</a>
+                                            <button class="layui-btn" lay-submit lay-filter="formDemo">购买</button>
                                         </div>
                                     </div>
                                 </div>

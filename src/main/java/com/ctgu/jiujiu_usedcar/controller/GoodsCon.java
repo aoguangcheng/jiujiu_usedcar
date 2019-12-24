@@ -33,7 +33,7 @@ public class GoodsCon {
 
     @RequestMapping("toaddGoods")
     public String toaddGoods(){
-        return "addgoods";
+        return "goods/addgoods";
     }
 
     @RequestMapping("addgoods")
@@ -68,10 +68,10 @@ public class GoodsCon {
         goods.setStarCount(0);
         User user = (User)session.getAttribute("user");
         goods.setOwner(user.getTelenum());
-        goods.setPurComment("无");
+        goods.setPurComment("商品还没有人购买，所以没有评价哦");
 
         goodsDao.save(goods);
-        return "redirect:/";
+        return "redirect:/home";
     }
 
     @RequestMapping("touserRelease")
@@ -79,7 +79,7 @@ public class GoodsCon {
         User user = (User)session.getAttribute("user");
         List<Goods> goodsList = goodsDao.findAllByStateAndOwner(1,user.getTelenum());
         model.addAttribute("goodsList",goodsList);
-        return "userRelease";
+        return "goods/userRelease";
     }
 
     @RequestMapping("touserPutdown")
@@ -88,7 +88,7 @@ public class GoodsCon {
         User user = (User)session.getAttribute("user");
         List<Goods> goodsList = goodsDao.findAllByStateAndOwner(2,user.getTelenum());
         model.addAttribute("goodsList",goodsList);
-        return "userPutdown";
+        return "goods/userPutdown";
     }
     //进入到详情页
     @RequestMapping("/todetailGoods/{id}")
@@ -124,7 +124,7 @@ public class GoodsCon {
             }
         }
 
-        return "detailGoods";
+        return "goods/detailGoods";
     }
 
 //    进入到已出售界面
@@ -134,7 +134,7 @@ public class GoodsCon {
         User user = (User)session.getAttribute("user");
         List<Goods> goodsList = goodsDao.findAllByStateAndOwner(3,user.getTelenum());
         model.addAttribute("goodsList",goodsList);
-        return "userSold";
+        return "goods/userSold";
 
     }
 //    下架物品
@@ -165,7 +165,7 @@ public class GoodsCon {
 //    修改物品
     @RequestMapping("toeditGoodsPage")
     public String editGoods(){
-        return "editGoods";
+        return "goods/editGoods";
     }
 
     @RequestMapping("toeditGoods")

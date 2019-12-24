@@ -27,9 +27,9 @@
 </div>
 
 <div class="layui-col-md10 layui-col-lg-offset1">
-    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-        <legend>我的收藏</legend>
-    </fieldset>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+<legend>我的发布</legend>
+</fieldset>
 </div>
 <!--<tr th:each="c:${list}">-->
 
@@ -55,7 +55,7 @@
                                         <span th:text="${goodsList.getPrice()}">价格未知</span>
                                     </div>
                                     <div class="layui-card-body">描述：
-                                        <span th:text="${goodsList.getDescription()}">无描述</span>
+                                        <span th:text="${#strings.abbreviate(goodsList.getDescription(),15)}">无描述</span>
                                     </div>
                                 </div>
                             </div>

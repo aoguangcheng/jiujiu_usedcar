@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" s>
 <head>
     <meta charset="UTF-8">
-    <title>发布物品</title>
+    <title>修改物品</title>
     <script src="layui/layui.js"></script>
     <link rel="stylesheet" href="layui/css/layui.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -13,8 +13,8 @@
     <div th:insert="~{header::topbar}"></div>
 </div>
 <div class="layui-row">
-    <div class="layui-col-md10 layui-col-lg-offset1">
-        <form class="layui-form" action="" th:action="@{/addgoods}" method="post" enctype="multipart/form-data">
+    <div class="layui-col-md8 layui-col-lg-offset2">
+        <form class="layui-form" action="" th:action="@{/toeditGoods}" method="post" enctype="multipart/form-data">
 
             <!--缺少头像上传<input type="file" name="file" accept="image/*">-->
             <div class="layui-form-item">
@@ -39,25 +39,21 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">分类</label>
                 <div class="layui-input-inline">
-                    <select id="summary_classifyname" onChange="nextChange()" name="summary_classifyname">
-                        <option selected="selected">请选择类别</option>
-                        <option value="手机数码">手机数码</option>
-                        <option value="生活百货">生活百货</option>
-                        <option value="美妆">美妆</option>
-                        <option value="女装">女装</option>
+                    <select id="province"  name="summary_classifyname" lay-verify="required" lay-filter="cityfilter">
+                        <option value="" selected="selected">请选择分类</option>
+                        <option value="数码电子">数码电子</option>
+                        <option value="生活日用">生活日用</option>
                         <option value="男装">男装</option>
-                        <option value="运动户外">运动户外</option>
+                        <option value="女装">女装</option>
                     </select>
                 </div>
                 <div class="layui-input-inline">
-                    <select id="detail_classifyname" name="detail_classifyname">
-                        <option selected="selected">请选择类别</option>
-                        <option value="耳机">耳机</option>
-                        <option value="手环">手环</option>
-                        <option value="手机">手机</option>
+                    <select  name="detail_classifyname" id="cityid" lay-verify="required">
+                        <option selected="selected" >请选择分类</option>
+
                     </select>
                 </div>
-                <div class="layui-form-mid layui-word-aux">请选择您的物品类别</div>
+                <div class="layui-form-mid layui-word-aux">请选择您的物品分类</div>
             </div>
 
             <!--爱好-->
@@ -74,7 +70,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">价格</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="price" required lay-verify="required" placeholder="请输入价格" autocomplete="on" class="layui-input">
+                    <input type="text" name="price" th:value="${session.goodsobj.getPrice()}" required lay-verify="required" placeholder="请输入价格" autocomplete="on" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">请输入您想出手的价格</div>
             </div>
@@ -82,7 +78,7 @@
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">描述</label>
                 <div class="layui-input-block">
-                    <textarea name="description" placeholder="请简短的描述物品" class="layui-textarea"></textarea>
+                    <textarea name="description" th:text="${session.goodsobj.getDescription()}" placeholder="请简短的描述物品" class="layui-textarea"></textarea>
                 </div>
             </div>
 
@@ -95,6 +91,46 @@
         </form>
     </div>
 </div>
+
+
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+        layui.form.on('select(cityfilter)', function (data) {
+            if (data.value == "") {
+                $('#cityid').html('<option >请选择分类</option>');
+                layui.form.render("select");
+            }
+            else {
+                if (data.value == "数码电子") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("手机", "手机"));
+                    $('#cityid').append(new Option("耳机", "耳机"));
+                    $('#cityid').append(new Option("笔记本电脑", "笔记本电脑"));
+                }
+                else if (data.value == "生活日用") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("五金工具", "五金工具"));
+                    $('#cityid').append(new Option("办公用品", "办公用品"));
+                    $('#cityid').append(new Option("保健护理", "保健护理"));
+                }
+                else if (data.value == "男装") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("上衣", "上衣"));
+                    $('#cityid').append(new Option("裤子", "裤子"));
+                }
+                else if (data.value == "女装") {
+                    $('#cityid').html('<option>请选择分类</option>')
+                    $('#cityid').append(new Option("外套", "外套"));
+                    $('#cityid').append(new Option("裙装", "裙装"));
+                    $('#cityid').append(new Option("裤子", "裤子"));
+                }
+                layui.form.render("select");
+            }
+        });
+    });
+</script>
+
 <script>
     layui.use('laydate', function() {
         var laydate = layui.laydate;

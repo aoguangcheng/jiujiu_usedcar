@@ -33,6 +33,6 @@ public class BrowseRecordCon {
             goodsList.add(goodsDao.findGoodsByGoodNum(browseRecord.getGoodNum()));
         }
         model.addAttribute("goodsList",goodsList);
-        return "userBrowseRecord";
+        return "user/userBrowseRecord";
     }
 }

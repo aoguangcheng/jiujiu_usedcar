@@ -32,24 +32,37 @@
 </div>
 <div class="center-in-center">
     <div class="layui-row">
-        <div class="layui-col-md4 layui-col-lg-offset4">
+        <div class="layui-col-md3 layui-col-lg-offset4">
 
-            <form class="layui-form" action="" th:action="@{/submitInfo}">
+            <form class="layui-form" action="" th:action="@{/toensurePay}">
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">密&emsp;码</label>
+                    <label class="layui-form-label">支付密码</label>
                     <div class="layui-input-block">
-                        <input type="password" name="password" required lay-verify="required"  placeholder="请输入密码" autocomplete="off" class="layui-input">
-                    </div>
-
-
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                        </div>
+                        <input type="password" name="password1" required lay-verify="required"  placeholder="请输入支付密码" autocomplete="off" class="layui-input">
                     </div>
                 </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="password2" required lay-verify="required"  placeholder="请再次输入密码密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                    <div>
+                        <!--<span th:text="'验证码错误，请重新输入'"></span>-->
+                        <span th:if="${paytips} == '两次密码不一致'">两次密码不一致，请重新输入</span>
+                        <span th:if="${paytips} == '已购买'">该物品已购买，请勿重复下单</span>
+                        <a th:if="${paytips} == '余额不足'" th:href="@{/toaddBalancePage}">余额不足，去充值</a>
+                        <span th:if="${paytips} == '密码不正确'">账号或者密码有误，请重新输入</span>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">确认支付</button>
+                            <button type="reset" class="layui-btn layui-btn-primary ">重置</button>
+                            <a  class="layui-btn layui-btn-danger" th:href="@{/tocanclePay}">取消支付</a>
+                        </div>
+                    </div>
+
             </form>
             <!--</div>-->
         </div>

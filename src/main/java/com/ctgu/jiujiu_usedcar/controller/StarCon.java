@@ -48,7 +48,7 @@ public class StarCon {
         starDao.delete(starList.get(0));
 //        在goods表中修改startcount字段的值，使其-1
         Goods goods2 = goodsDao.findGoodsByGoodNum(goods.getGoodNum());
-        goods2.setStarCount(goods2.getStarCount() + 1);
+        goods2.setStarCount(goods2.getStarCount() - 1);
         goodsDao.save(goods2);
         return "redirect:/todetailGoods/"+ goods.getGoodNum().toString();
     }
@@ -64,6 +64,6 @@ public class StarCon {
             goodsList.add(goodsDao.findGoodsByGoodNum(star.getGoodNum()));
         }
         model.addAttribute("goodsList",goodsList);
-        return "userStar";
+        return "user/userStar";
     }
 }

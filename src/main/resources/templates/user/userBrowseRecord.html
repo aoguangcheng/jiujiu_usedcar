@@ -42,7 +42,7 @@
                     <div style="padding: 2px; background-color: #F2F2F2;">
                         <div class="layui-col-md12">
                             <div class="layui-card-body">
-                                <a href="addgoods.html" th:href="@{/todetailGoods/} + ${goodsList.getGoodNum()}">
+                                <a href="../goods/addgoods.html" th:href="@{/todetailGoods/} + ${goodsList.getGoodNum()}">
                                     <img th:src="@{${goodsList.getPic1()}}" alt="图片" height="160" width="250"></a>
                             </div>
                             <div class="layui-col-md12">
@@ -55,7 +55,8 @@
                                         <span th:text="${goodsList.getPrice()}">价格未知</span>
                                     </div>
                                     <div class="layui-card-body">描述：
-                                        <span th:text="${goodsList.getDescription()}">无描述</span>
+                                        <!--<span th:text="${goodsList.getDescription()}">无描述</span>-->
+                                        <span th:text="${#strings.abbreviate(goodsList.getDescription(),15)}">无描述</span>
                                     </div>
                                 </div>
                             </div>
