@@ -70,7 +70,7 @@ public class UserCon {
         user.setCollege(college);
         user.setMajor(major);
         //user.setHobby(hobby.get(0));
-        user.setBalance(userDao.findByTelenum(telenum).get(0).getBalance());
+        user.setBalance(userDao.findByTelenum(telenum).get(0).getBalance().toString());
         user.setDormitory(dormitory+build + "#");
         System.out.println(user.toString());
 

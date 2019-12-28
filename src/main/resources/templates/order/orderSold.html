@@ -9,19 +9,6 @@
 </head>
 
 <body>
-<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">登录</a>-->
-<!--<a th:if="${session.user} == null" th:href="@{/toregisterPage}">注册</a>-->
-<!--<a th:if="${session.user} != null" th:href="@{/tologinout}">退出登录</a>-->
-<!--<span th:if="${session.user} == null">未登录</span>-->
-<!--<span th:if="${session.user}  != null" th:text="${session.user.getNickname()}">用户名</span>-->
-<!--<a th:if="${session.user} != null" th:href="@{/touserInfo}">个人中心</a>-->
-<!--<a th:if="${session.user} != null" th:href="@{/toaddGoods}">发布物品</a>-->
-<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">发布物品</a>-->
-<!--<a th:if="${session.user} != null" th:href="@{/touserRelease}">我的发布</a>-->
-<!--<a th:if="${session.user} == null" th:href="@{/tologinPage}">我的发布</a>-->
-
-<!--<img th:if="${session.user} != null" th:src="@{${session.user.getHeadicon()}}" alt="头像" width="60" height="40">-->
-
 <div class="layui-row">
     <div th:insert="~{header::topbar}"></div>
 </div>
@@ -31,12 +18,166 @@
         <legend>我的售卖</legend>
     </fieldset>
 </div>
-<!--<tr th:each="c:${list}">-->
+
 
 <div class="layui-row">
     <div class="layui-col-md10 layui-col-lg-offset1">
+        <div id="" >
+            <table class="layui-table" align="center">
+                <colgroup>
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead align="center">
+                <tr align="center">
+                    <th align="center">订单编号</th>
+                    <th align="center">买家</th>
+                    <th align="center">图片</th>
+                    <th align="center">描述</th>
+                    <th align="center">价格</th>
+                    <th align="center">创建时间</th>
+                    <td align="center">详情</td>
+                    <td align="center">同意</td>
+                    <td align="center">拒绝</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="orderList:${applyOrderList}" align="center">
+                    <td th:text="${orderList.getOrderid()}"align="center"></td>
+                    <td th:text="${orderList.getBuyer()}"align="center"></td>
+                    <!--<td th:text="${c.password}"></td>-->
+                    <td align="center">
+                        <img src="//t.cn/RCzsdCq" th:src="@{${orderList.getPic()}}" class="layui-nav-img">
+                    </td>
+                    <td th:text="${orderList.getDescription()}"align="center"></td>
+                    <td th:text="${orderList.getPrice()}"align="center"></td>
+                    <td th:text="${orderList.getDate()}"align="center"></td>
+                    <!--<td th:text="${c.productIcon}"></td>-->
+                    <td align="center">
+                        <a class="layui-btn layui-btn-warm layui-btn-xs" th:href="@{/todetailOrderApply/} + ${orderList.getGoodnum()}">详情</a>
+                    </td>
+                    <td align="center">
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" th:href="@{/toagreeOrderApply/} + ${orderList.getOrderid()}">同意</a>
+                    </td>
+                    <td align="center">
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" th:href="@{/torefuseOrderApply/} + ${orderList.getOrderid()}">拒绝</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
+<div class="layui-col-md10 layui-col-lg-offset1">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>已同意</legend>
+    </fieldset>
+</div>
 
+<div class="layui-row">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+        <div id="" >
+            <table class="layui-table" align="center">
+                <colgroup>
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead align="center">
+                <tr align="center">
+                    <th align="center">订单编号</th>
+                    <th align="center">买家</th>
+                    <th align="center">图片</th>
+                    <th align="center">描述</th>
+                    <th align="center">价格</th>
+                    <th align="center">创建时间</th>
+                    <td align="center">详情</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="orderList:${applyOrderList1}" align="center">
+                    <td th:text="${orderList.getOrderid()}"align="center"></td>
+                    <td th:text="${orderList.getBuyer()}"align="center"></td>
+                    <!--<td th:text="${c.password}"></td>-->
+                    <td align="center">
+                        <img src="//t.cn/RCzsdCq" th:src="@{${orderList.getPic()}}" class="layui-nav-img">
+                    </td>
+                    <td th:text="${orderList.getDescription()}"align="center"></td>
+                    <td th:text="${orderList.getPrice()}"align="center"></td>
+                    <td th:text="${orderList.getDate()}"align="center"></td>
+                    <!--<td th:text="${c.productIcon}"></td>-->
+                    <td align="center">
+                        <a class="layui-btn layui-btn-warm layui-btn-xs" th:href="@{/todetailOrderApply/} + ${orderList.getGoodnum()}">详情</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="layui-col-md10 layui-col-lg-offset1">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>已拒绝</legend>
+    </fieldset>
+</div>
+
+<div class="layui-row">
+    <div class="layui-col-md10 layui-col-lg-offset1">
+        <div id="" >
+            <table class="layui-table" align="center">
+                <colgroup>
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead align="center">
+                <tr align="center">
+                    <th align="center">订单编号</th>
+                    <th align="center">买家</th>
+                    <th align="center">图片</th>
+                    <th align="center">描述</th>
+                    <th align="center">价格</th>
+                    <th align="center">创建时间</th>
+                    <td align="center">详情</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="orderList:${applyOrderList2}" align="center">
+                    <td th:text="${orderList.getOrderid()}"align="center"></td>
+                    <td th:text="${orderList.getBuyer()}"align="center"></td>
+                    <!--<td th:text="${c.password}"></td>-->
+                    <td align="center">
+                        <img src="//t.cn/RCzsdCq" th:src="@{${orderList.getPic()}}" class="layui-nav-img">
+                    </td>
+                    <td th:text="${orderList.getDescription()}"align="center"></td>
+                    <td th:text="${orderList.getPrice()}"align="center"></td>
+                    <td th:text="${orderList.getDate()}"align="center"></td>
+                    <!--<td th:text="${c.productIcon}"></td>-->
+                    <td align="center">
+                        <a class="layui-btn layui-btn-warm layui-btn-xs" th:href="@{/todetailOrderApply/} + ${orderList.getGoodnum()}">详情</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>

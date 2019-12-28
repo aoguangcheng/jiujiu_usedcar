@@ -22,5 +22,15 @@ public class UploadImageConfigurer implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(fileRelativePath).
                 addResourceLocations("file:/" + filePath);
+        registry.addResourceHandler("/images/**").
+                addResourceLocations("file:/images/");
+        WebMvcConfigurer.super.addResourceHandlers(registry);
     }
 }
+
+/*registry.addResourceHandler("/images/**").
+                addResourceLocations("file:/images");
+* /images/**------>>相当于>>file:/C://images
+* /images/xxx.jps------>>相当于>>file:/C://images/xxx.jpg
+*
+* */

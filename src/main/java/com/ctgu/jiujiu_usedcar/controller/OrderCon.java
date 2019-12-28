@@ -103,6 +103,7 @@ public class OrderCon {
     public String addBalancePage(){
         return "redirect:/touserInfo";
     }
+
 //    从主页去我的下单
     @RequestMapping("toorderApply")
     public String orderApply(Model model,
@@ -110,8 +111,11 @@ public class OrderCon {
         User user = (User)session.getAttribute("user");
         List<Order> orderList = orderDao.findByBuyerAndState(user.getTelenum(),1);
         model.addAttribute("applyOrderList",orderList);
+        List<Order> orderList1 = orderDao.findByBuyerAndState(user.getTelenum(),5);
+        model.addAttribute("applyOrderList1",orderList1);
         return "order/orderApply";
     }
+
 //    从主页去我的售卖
     @RequestMapping("toorderSold")
     public String orderSold(Model model,
@@ -119,8 +123,12 @@ public class OrderCon {
         User user = (User)session.getAttribute("user");
         List<Order> orderList = orderDao.findBySellerAndState(user.getTelenum(),1);
         model.addAttribute("applyOrderList",orderList);
-        List<Order> orderList1 = orderDao.findByBuyerAndState(user.getTelenum(),2);
-        model.addAttribute("applyOrderList1",orderList);
+//        同意
+        List<Order> orderList1 = orderDao.findBySellerAndState(user.getTelenum(),2);
+        model.addAttribute("applyOrderList1",orderList1);
+//        拒绝
+        List<Order> orderList2 = orderDao.findBySellerAndState(user.getTelenum(),3);
+        model.addAttribute("applyOrderList2",orderList2);
         return "order/orderSold";
     }
 //    从主页去完结订单
@@ -137,8 +145,8 @@ public class OrderCon {
         return "redirect:/todetailGoods/"+ String.valueOf(goodsNum);
     }
 
-
 //    传入的参数是订单编号，直接修改订单的状态
+//    取消下单
     @RequestMapping("/tocancleOrderApply/{orderid}")
     public String cancleOrderApply(@PathVariable("orderid") Integer orderid){
 //        return "redirect:/todetailGoods/"+ goods.getGoodNum().toString();
@@ -146,5 +154,32 @@ public class OrderCon {
         order.setState(5);
         orderDao.save(order);
         return "redirect:/toorderApply";
+    }
+    //    重新下单
+    @RequestMapping("/toreapplyOrderApply/{orderid}")
+    public String toreapplyOrderApply(@PathVariable("orderid") Integer orderid){
+//        return "redirect:/todetailGoods/"+ goods.getGoodNum().toString();
+        Order order = orderDao.findByOrderid(orderid);
+        order.setState(1);
+        orderDao.save(order);
+        return "redirect:/toorderApply";
+    }
+
+//    卖家同意订单
+    @RequestMapping("/toagreeOrderApply/{orderid}")
+    public String toagreeOrderApply(@PathVariable("orderid") Integer orderid){
+        Order order = orderDao.findByOrderid(orderid);
+        order.setState(2);
+        orderDao.save(order);
+        return "redirect:/toorderSold";
+    }
+
+//    卖家拒绝订单
+    @RequestMapping("/torefuseOrderApply/{orderid}")
+    public String torefuseOrderApply(@PathVariable("orderid") Integer orderid){
+        Order order = orderDao.findByOrderid(orderid);
+        order.setState(3);
+        orderDao.save(order);
+        return "redirect:/toorderSold";
     }
 }
